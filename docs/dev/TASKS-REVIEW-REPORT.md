@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for the selected documentation boundary; implementation not authorized. Reviewed `TASKS.md` SHA-256 `8ab25d5e54e0721e0a8ad286d3aff28271eed205cc41389fe8ca93898d8b1725`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for the selected documentation boundary; implementation not authorized. Reviewed `TASKS.md` SHA-256 `00674a219b20bc5bc5d7bb0fcc62a789801a1dbadaf31a5b92a4741220100440`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -31,6 +31,24 @@ Current hierarchy has 21 unique unchecked tasks. Phase 2 has T-010/T-011 deliver
 | 2.1 | 2 | T-012 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
 | 3.1 | 2 | T-016 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
 | 3.2 | 3 | T-020 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 2
+
+Review by the owning sdd-tasks role on 2026-10-24. Governing identities: `PLAN.md` SHA-256 `78e1a717ca9f9974ee9d0135c0218d258ad275595f158228abc52f071a91772a`; `PLAN-REVIEW-REPORT.md` SHA-256 `7d6cf1b679c38304a5376a8bc87bed01e08eaa7f0f9d294f34a07004a38fa1c4`; `layout.md` SHA-256 `953d8c6d3856ce40ce98253e500b44e64ff0995f42bfeb604ad0bb9605bb5117`; `SPEC.md` SHA-256 `ec7b4c0d7d96172e1a54dd45675fc76ef9fd701ef96d0ef71bc00bc8cce52c9d`; `DECOMPOSITION.md` SHA-256 `1d7a32bd1cf6c96d07764e6d61392e402f78a507dba8776314b50019a333548b`.
+
+T-022 owns the pure predicate; T-023 owns view integration, browser evidence and guidance. T-024 reviews delivery milestone 4.1 and T-025 alone reviews final milestone 4.2 after delivery closure. These two delivery tasks are a justified narrow group with distinct rule/view evidence, not padding. All 25 task IDs are unique/unchecked; R10 and Phase 4 exits have complete coverage. Earlier TASKS content remains an exact prefix.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| 1.1 | 3 | T-004 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 1.2 | 3 | T-008 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 2.1 | 2 | T-012 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 3.1 | 2 | T-016 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 3.2 | 3 | T-020 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 4.1 | 2 | T-024 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
 
 
 Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.

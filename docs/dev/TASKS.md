@@ -84,3 +84,21 @@ Execute only an authorized range after preparation integration and eligible-phas
         - [ ] T-021 — Review, test and report phase 3
             Depends on: completion/closure of delivery milestones 3.1, 3.2, including their review tasks. Review cross-milestone code, run all phase exits/regressions, repair blockers and aggregate findings/TODOs. Commit the phase report and refresh HANDOFF; verify integration and the planned phase release. If this is the last phase in the complete owning list, also write the final implementation report and aggregate all unresolved TODOs with provenance/options.
             Report: `docs/dev/reports/phases/3/PHASE-REPORT.md`; final report when applicable: `docs/dev/reports/IMPLEMENTATION-REPORT.md`.
+
+## Phase 4 — Conditional landing guidance
+
+- [ ] Phase 4 — Conditional landing guidance
+    - [ ] Milestone 4.1 — Dynamic ghost display
+        - [ ] T-022 — Implement occupied-cell ghost visibility
+            Scope: pure visibility predicate and landing fixtures. Depends on: T-021 and Phase 3 integration/closure.
+            Evidence: Exact row 9/10, straddling and no-landing/current-pose suppression cases pass without changing the projector. Maintain affected module/user documentation with the result.
+        - [ ] T-023 — Integrate and verify dynamic ghost presentation
+            Scope: snapshot/view wiring, both-browser scenarios and controls guidance. Depends on: T-022.
+            Evidence: Hide/restore appears in Canvas; hard-drop target and timing remain unchanged under R09-R10. Maintain affected module/user documentation with the result.
+        - [ ] T-024 — Review, test and report milestone 4.1
+            Depends on: T-022, T-023. Review the milestone implementation and collaborating modules, run its PLAN exit checks and regressions, repair blockers, and commit the report with findings and TODOs (None when empty).
+            Report: `docs/dev/reports/phases/4/4.1.md`.
+    - [ ] Milestone 4.2 — Phase review
+        - [ ] T-025 — Review, test and report phase 4
+            Depends on: completion/closure of delivery milestones 4.1, including their review tasks. Review cross-milestone code, run all phase exits/regressions, repair blockers and aggregate findings/TODOs. Commit the phase report and refresh HANDOFF; verify integration and the planned phase release. If this is the last phase in the complete owning list, also write the final implementation report and aggregate all unresolved TODOs with provenance/options.
+            Report: `docs/dev/reports/phases/4/PHASE-REPORT.md`; final report when applicable: `docs/dev/reports/IMPLEMENTATION-REPORT.md`.
