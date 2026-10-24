@@ -34,3 +34,7 @@ The intended toolchain is TypeScript/Vite with unit checks and Playwright. T-001
 ## Ghost visibility ownership
 
 `src/core/ghost.ts` owns the pure occupied-cell visibility predicate and `tests/unit/core/ghost.test.ts` owns threshold fixtures. The existing landing projector supplies cells; browser snapshot/view paths consume the boolean. `tests/browser/ghost.spec.ts` owns dynamic hide/restore and drop-independence interaction/rendering checks. No configuration or storage path is introduced.
+
+## Penetrator ownership
+
+`src/core/penetrator.ts` owns transit/terminal policy and focused cavity fixtures live under `tests/unit/core/`. Existing `game.ts` owns activation/bank/award transitions; `board.ts` validates final insertion and settled appearance. `session.ts` consumes policy grounding. Existing input/view adapters own B activation, white drawing and the count indicator. `tests/browser/penetrator.spec.ts` owns the served barrier/cavity, timing and screenshot scenarios. Fixtures use controlled test seams, not production cheat controls.
