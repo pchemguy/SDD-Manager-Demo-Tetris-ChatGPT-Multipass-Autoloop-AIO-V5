@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for TASKS. Reviewed `PLAN.md` SHA-256 `212f2a0ea46d846b38c246df814702ed4e672f50d49f001cc14507953ce85417`; `layout.md` SHA-256 `cf4f0ebfe80dffe8bf3e1f4a9209fef785df0ae0a319a0a756796c2f5d33d313`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for layout; TASKS held pending combined layout review. Reviewed `PLAN.md` SHA-256 `78e1a717ca9f9974ee9d0135c0218d258ad275595f158228abc52f071a91772a`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -56,6 +56,22 @@ Combined review maps source/hold, rotation/projector and timing to cohesive phys
 | Phase 1 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
 | Phase 2 | 1 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
 | Phase 3 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 4
+
+Review by the owning sdd-plan role on 2026-10-24. Governing identities: `SPEC.md` SHA-256 `ec7b4c0d7d96172e1a54dd45675fc76ef9fd701ef96d0ef71bc00bc8cce52c9d`; `SPEC-REVIEW-REPORT.md` SHA-256 `f3d35048f171cd007b386ae9906c7dd6fec5bca25ab65be7ccfeee03c80d23b2`; `ARCHITECTURE.md` SHA-256 `88b08aecbe4524c3cda237b8596fa571820be70d4f3276dd69d030ef00ba2964`; `DECOMPOSITION.md` SHA-256 `1d7a32bd1cf6c96d07764e6d61392e402f78a507dba8776314b50019a333548b`.
+
+R10 has one narrow independent visibility outcome in Phase 4. A single delivery milestone is justified: splitting a pure predicate and its view into separate milestones would not add user value. Strict earlier phase boundaries remain unchanged; the new exit includes rendering and drop/timing regressions. Strategy Ready, updated placement review pending.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| Phase 1 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 2 | 1 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 3 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 4 | 1 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
 
 
 Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.

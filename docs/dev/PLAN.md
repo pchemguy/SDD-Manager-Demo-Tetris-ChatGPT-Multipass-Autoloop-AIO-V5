@@ -75,3 +75,21 @@ Exit: R09 timer/drop/reset/suspension boundaries and both-browser interactions p
 ### Milestone 3.3 — Phase review
 
 After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify shared ghost/drop positions, kick-order/rejection fixtures, complete interval/reset semantics and both-browser regressions Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
+
+## Phase 4 — Conditional landing guidance
+
+Outcome: Keep the ghost visible only when its landing lies wholly in the lower half.
+
+Scope and boundary: R10 dynamic visibility over the existing projector; collision, drop and lock policies remain unchanged. No setting UI is required.
+
+Prerequisite: Phase 3 completed, reviewed, integrated and published. Target version: v0.4.0.
+
+### Milestone 4.1 — Dynamic ghost display
+
+Demonstrate the ghost disappearing/reappearing as its projected occupied cells cross the midline.
+
+Exit: R10 minimum-row 9/10 and straddling cases pass; demonstrate visual clarity for continue/amend/simplify/stop feedback A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 4.2 — Phase review
+
+After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify midline/straddling hide-restore and unchanged hard-drop/timing behavior in rules and both-browser rendering Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
