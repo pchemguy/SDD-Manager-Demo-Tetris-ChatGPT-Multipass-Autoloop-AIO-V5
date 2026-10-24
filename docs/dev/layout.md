@@ -38,3 +38,7 @@ The intended toolchain is TypeScript/Vite with unit checks and Playwright. T-001
 ## Penetrator ownership
 
 `src/core/penetrator.ts` owns transit/terminal policy and focused cavity fixtures live under `tests/unit/core/`. Existing `game.ts` owns activation/bank/award transitions; `board.ts` validates final insertion and settled appearance. `session.ts` consumes policy grounding. Existing input/view adapters own B activation, white drawing and the count indicator. `tests/browser/penetrator.spec.ts` owns the served barrier/cavity, timing and screenshot scenarios. Fixtures use controlled test seams, not production cheat controls.
+
+## Configuration ownership
+
+`src/app/settings.ts` owns schema/defaults and the page model; `src/browser/settings.ts` owns labeled native controls. Existing session/game/drop/ghost paths consume the validated values and effective per-piece policies. Source peek remains in `src/core/source.ts`, with preview drawing in the existing view. Unit tests live under `tests/unit/app/` and source tests under core; `tests/browser/settings.spec.ts` owns control, focus, matrix and reload/restart scenarios. No storage or URL adapter exists in the session-only path.
