@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for the selected documentation boundary; implementation not authorized. Reviewed `TASKS.md` SHA-256 `b643065085d8dec4751fdd51a9c97d4ffd910ab178d1a99941bb2bf582d567f1`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for the selected documentation boundary; implementation not authorized. Reviewed `TASKS.md` SHA-256 `c1ae70a2827a72bc5bb5ae574e93563edc3f2fd2b7543a9a811cceb949528be0`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -69,6 +69,28 @@ T-026/T-027 form the narrow policy/controller integration group and T-029–T-03
 | 4.1 | 2 | T-024 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
 | 5.1 | 2 | T-028 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
 | 5.2 | 3 | T-032 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 4
+
+Review by the owning sdd-tasks role on 2026-10-24. Governing identities: `PLAN.md` SHA-256 `90e870d4a3b74d9d3a3af9cfd3c3c0fc22accddc547671ecb39afec759ba44f0`; `PLAN-REVIEW-REPORT.md` SHA-256 `021abb374850550789373ce2ea214e0b126ac2f3ef6f7646a07315a8db81c4b2`; `layout.md` SHA-256 `38ec95303aebc458f5ad4eb44340d9931bdf6b09875eb37dd6d8cb8b2dba8e75`; `SPEC.md` SHA-256 `69a868eaa0bbbff94687f4a98a31c2185c0bf502fd8a8adc7e138cb5c84c4041`; `DECOMPOSITION.md` SHA-256 `ad371e4cd67b1e6e790339673f8fdbed85bd0422f2de1e4a33647645ac6b14f4`.
+
+T-034/T-035 separate schema/lifecycle from form/controller integration; T-037/T-038 separate queue preview from full native-control and cross-feature matrix. Both two-task groups are justified cohesive outcomes, not under-sized substitutes for an unspecified subsystem. T-036/T-039 review delivery milestones and T-040 alone reviews final milestone 6.3. All 40 IDs are unique/unchecked, dependencies feasible, R12 and every new exit covered. Earlier TASKS prefix is unchanged.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| 1.1 | 3 | T-004 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 1.2 | 3 | T-008 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 2.1 | 2 | T-012 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 3.1 | 2 | T-016 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 3.2 | 3 | T-020 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 4.1 | 2 | T-024 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 5.1 | 2 | T-028 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 5.2 | 3 | T-032 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 6.1 | 2 | T-036 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 6.2 | 2 | T-039 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
 
 
 Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.

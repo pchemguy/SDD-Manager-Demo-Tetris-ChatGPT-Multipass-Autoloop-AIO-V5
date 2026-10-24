@@ -133,3 +133,31 @@ Execute only an authorized range after preparation integration and eligible-phas
         - [ ] T-033 — Review, test and report phase 5
             Depends on: completion/closure of delivery milestones 5.1, 5.2, including their review tasks. Review cross-milestone code, run all phase exits/regressions, repair blockers and aggregate findings/TODOs. Commit the phase report and refresh HANDOFF; verify integration and the planned phase release. If this is the last phase in the complete owning list, also write the final implementation report and aggregate all unresolved TODOs with provenance/options.
             Report: `docs/dev/reports/phases/5/PHASE-REPORT.md`; final report when applicable: `docs/dev/reports/IMPLEMENTATION-REPORT.md`.
+
+## Phase 6 — Session game configuration
+
+- [ ] Phase 6 — Session game configuration
+    - [ ] Milestone 6.1 — Validated game controls
+        - [ ] T-034 — Implement typed page-session settings
+            Scope: application settings schema/model and pure validation/lifecycle fixtures. Depends on: T-033 and Phase 5 integration/closure.
+            Evidence: Six fields/defaults/allowed values, invalid rejection and restart-versus-reload model lifetime pass without storage access. Maintain affected module/user documentation with the result.
+        - [ ] T-035 — Connect controls availability guards and lock-policy latching
+            Scope: HTML form, controller effective policy and hold/drop/ghost guards. Depends on: T-034.
+            Evidence: All four locking combinations, immediate disable guards, mid-piece edits and held-state retention pass; controls keep native focus behavior. Maintain affected module/user documentation with the result.
+        - [ ] T-036 — Review, test and report milestone 6.1
+            Depends on: T-034, T-035. Review the milestone implementation and collaborating modules, run its PLAN exit checks and regressions, repair blockers, and commit the report with findings and TODOs (None when empty).
+            Report: `docs/dev/reports/phases/6/6.1.md`.
+    - [ ] Milestone 6.2 — Preview and configuration interactions
+        - [ ] T-037 — Integrate non-consuming queue preview
+            Scope: source peek/snapshot, preview rendering and deterministic queue fixtures. Depends on: T-036.
+            Evidence: Toggle and repeated render leave sequence unchanged; empty/swap hold consume the expected next kind; disabled preview hides immediately. Maintain affected module/user documentation with the result.
+        - [ ] T-038 — Verify the configuration matrix and document controls
+            Scope: both-browser native-control/focus/reload/penetrator scenarios and README settings guide. Depends on: T-037.
+            Evidence: Defaults, valid/invalid changes, all lock modes, restart retention, reload reset and absence of persistence access pass on served build. Maintain affected module/user documentation with the result.
+        - [ ] T-039 — Review, test and report milestone 6.2
+            Depends on: T-037, T-038. Review the milestone implementation and collaborating modules, run its PLAN exit checks and regressions, repair blockers, and commit the report with findings and TODOs (None when empty).
+            Report: `docs/dev/reports/phases/6/6.2.md`.
+    - [ ] Milestone 6.3 — Phase review
+        - [ ] T-040 — Review, test and report phase 6
+            Depends on: completion/closure of delivery milestones 6.1, 6.2, including their review tasks. Review cross-milestone code, run all phase exits/regressions, repair blockers and aggregate findings/TODOs. Commit the phase report and refresh HANDOFF; verify integration and the planned phase release. If this is the last phase in the complete owning list, also write the final implementation report and aggregate all unresolved TODOs with provenance/options.
+            Report: `docs/dev/reports/phases/6/PHASE-REPORT.md`; final report when applicable: `docs/dev/reports/IMPLEMENTATION-REPORT.md`.
