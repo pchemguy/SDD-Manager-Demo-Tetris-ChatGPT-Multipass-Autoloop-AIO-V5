@@ -37,7 +37,7 @@ Canvas keeps grid drawing straightforward; HTML preserves native controls and st
 
 The source owns a shuffled bag and its cursor; hold state belongs to the reducer and consumes the source only for an empty hold slot. The controller enforces the reducer-owned one-hold-per-cycle latch and coordinates time, with no duplicate view state. The view draws the held kind from a snapshot without drawing another source item.
 
-A shared pure landing projection serves ghost and hard drop. Rotation tries a bounded deterministic candidate list through board validity. The controller owns grounding timestamps and deadlines; actions report whether the piece remains supported so the same deadline governs gravity, soft drop and hard drop. Rendering and input cannot reset it. Production selects seven-bag supply and interval locking; the classic source/locking strategies remain testable core policies for their scoped contracts.
+A shared pure landing projection serves ghost and hard drop. Rotation tries a bounded deterministic candidate list through board validity. The controller owns grounding timestamps and deadlines; actions report whether the piece remains supported so the same deadline governs gravity, soft drop and hard drop. Rendering and input cannot reset it. Production selects seven-bag supply and the configured locking policy, defaulting to interval locking; the classic source/locking strategies remain testable core policies for their scoped contracts.
 
 ## Ghost visibility
 
@@ -48,3 +48,9 @@ A pure visibility predicate consumes projected occupied cells; the browser view 
 The landing/projector boundary selects ordinary or penetrator semantics from reducer-owned active-mode state. Ordinary play retains continuous collision-limited descent. Penetrator traversal ignores settled occupancy but keeps board bounds and a valid terminal-placement invariant. The same policy supplies movement/rotation eligibility, terminal grounding, ghost and hard drop, preventing parallel definitions of a special landing.
 
 The reducer owns bonus count and activation state; a successful activation is one atomic bonus-spend/mode transition. The board still validates all inserted cells at lock and never erases occupied transit cells. Settled cells retain appearance metadata so white penetrator cells remain visually identifiable without retaining the ability. Views show one bonus symbol per available activation and cannot earn or spend bonuses.
+
+## Session configuration and preview
+
+An application settings model owns validated desired settings independently of game state. HTML controls submit typed changes; they never write reducer internals. Each active piece carries a snapshot of its locking policies so live control changes cannot retroactively lock it or refresh its deadline. Display/action-availability settings are read immediately. Restart replaces game state while retaining the settings model; page initialization creates default settings in memory.
+
+The bag source exposes a non-consuming next-kind peek. The application supplies it in snapshots; preview rendering and toggling do not draw or reorder pieces. The settings adapter and preview view depend on existing application/source ports, avoiding a second piece queue. There is no storage or URL dependency in the session-only configuration path.
