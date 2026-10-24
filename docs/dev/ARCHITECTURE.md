@@ -32,3 +32,9 @@ An invalid gameplay action returns unchanged state rather than throwing. A block
 Pure rules accept deterministic boards and piece sequences; the application accepts a controlled clock. These seams support boundary checks without simulating browser frames. Browser checks establish actual keyboard delivery, Canvas output, status controls and restart behavior in the [required isolated environments](../../BROWSER_DEV_POLICY.md). Their evidence is separate from unit checks.
 
 Canvas keeps grid drawing straightforward; HTML preserves native controls and status semantics. This does not promise a fully screen-reader-playable spatial board. DECOMPOSITION owns logical responsibilities and interface detail; SPEC owns observable contracts.
+
+## Piece supply and landing policies
+
+The source owns a shuffled bag and its cursor; hold state belongs to the reducer and consumes the source only for an empty hold slot. The controller owns the one-hold-per-cycle latch and time coordination through reducer state, with no duplicate view state. The view draws the held kind from a snapshot without drawing another source item.
+
+A shared pure landing projection serves ghost and hard drop. Rotation tries a bounded deterministic candidate list through board validity. The controller owns grounding timestamps and deadlines; actions report whether the piece remains supported so the same deadline governs gravity, soft drop and hard drop. Rendering and input cannot reset it. Production selects seven-bag supply and interval locking; the classic source/locking strategies remain testable core policies for their scoped contracts.

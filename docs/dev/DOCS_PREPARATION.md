@@ -99,3 +99,4 @@ Inherited timing/hold/source decisions are accepted at initial review. Delegated
 ## Pass 2 document evidence
 
 - DOCS-002: `PROJECT.md` SHA-256 `6f777bc9067f539f9839de43e58447eff555d015e8ab6bbd275b2edd65746768`. Autoloop PROJECT preapproval under initial human approval. Cumulative scope includes only the baseline and gameplay enhancements; future visibility, penetrator and configuration requirements remain in the scope record. Completion commit requires push/readback, then issue 2 closure/readback before progression.
+- DOCS-003: `ARCHITECTURE.md` SHA-256 `d479065413a80ddf85ada6e22750e9285af9f73b03415cff22ac628a902a9edd`. Autodoc preapproval. Reviewed source/hold consumption ownership, one landing calculation and single deadline owner against current PROJECT; adapters remain outside core and Phase 1 design invariants hold. Completion commit requires push/readback, then issue 3 closure/readback before progression.
