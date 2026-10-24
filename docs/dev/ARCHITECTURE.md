@@ -35,6 +35,10 @@ Canvas keeps grid drawing straightforward; HTML preserves native controls and st
 
 ## Piece supply and landing policies
 
-The source owns a shuffled bag and its cursor; hold state belongs to the reducer and consumes the source only for an empty hold slot. The controller owns the one-hold-per-cycle latch and time coordination through reducer state, with no duplicate view state. The view draws the held kind from a snapshot without drawing another source item.
+The source owns a shuffled bag and its cursor; hold state belongs to the reducer and consumes the source only for an empty hold slot. The controller enforces the reducer-owned one-hold-per-cycle latch and coordinates time, with no duplicate view state. The view draws the held kind from a snapshot without drawing another source item.
 
 A shared pure landing projection serves ghost and hard drop. Rotation tries a bounded deterministic candidate list through board validity. The controller owns grounding timestamps and deadlines; actions report whether the piece remains supported so the same deadline governs gravity, soft drop and hard drop. Rendering and input cannot reset it. Production selects seven-bag supply and interval locking; the classic source/locking strategies remain testable core policies for their scoped contracts.
+
+## Ghost visibility
+
+A pure visibility predicate consumes projected occupied cells; the browser view draws only when it permits the ghost. Projection remains the core landing responsibility even when the ghost is hidden, so hard drop behavior is independent of visibility. The board midline is a geometric rule over zero-based occupied rows, not the piece square origin or its center.
