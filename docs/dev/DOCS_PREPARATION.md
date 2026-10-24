@@ -4,7 +4,7 @@
 
 - Mode and source: autodoc/autoloop, explicitly requested by the user on 2026-10-24 for this repository and the six scopes below.
 - Multipass delivery: strict; no flexible integration permission was given. Later scopes append bounded phases/tasks and preserve earlier IDs, names, scope, milestone membership, order, dependencies and exits.
-- Current pass: 6, cumulative scope 6; DOCS-008 completion recorded below. After its verified publication/issue closure, stop before DOCS-009 and await explicit advance.
+- Current pass: 6, all six predefined scopes completed through DOCS-008. Completion `6dd80ef88e00d0e23b69866df8b91f18a000c9b2` was published/read back and issue 8 closed/read back. Stop before DOCS-009.
 - Approval basis: the user approved the first PROJECT and presented cross-scope decisions on 2026-10-24. Later PROJECT approvals are waived, announced in chat before that first checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. This approval authorizes the predefined sequence/resets. The presented product choices are accepted within their stated applicability.
 - Delegation after first approval: resolve later material decisions within the predefined scope, record the rationale and explain consequential choices in chat without adding approval pauses.
 - Stop: after Pass 6 DOCS-008 publication and issue closure, before DOCS-009, whole-package QC, documentation integration or implementation. Implementation will require subsequent authorization; releases apply only after verified integrated implementation phases.
@@ -72,7 +72,7 @@ Material unresolved decisions: none at the initial approved scope. TypeScript/Ca
 
 ## Pending transitions
 
-Publish/read back the current DOCS-008 completion and close/read back issue 8; then stop before DOCS-009 and await explicit advance. Git/provider observations settle these effects; earlier pass evidence is historical. Milestone 1 and DOCS-009 remain open.
+The final DOCS-008 result is published/read back and issue 8 is closed/read back. DOCS-009 remains unchecked/open and milestone 1 open. Await explicit advance before package QC, documentation integration or implementation. The final record-count/handoff correction requires its own publication/readback; it changes no product document or task range.
 
 ## Pass 1 document evidence
 
@@ -195,5 +195,9 @@ Carry forward per-setting URL → cookie → default resolution and explicit-def
 
 ## Pass 6 delivery range and loop boundary
 
-Append Phase 7 / milestones 7.1–7.3 / T-041–T-047. Phases 1–6 and T-001–T-040 retain exact prior content. The final hierarchy contains seven phases, 13 delivery milestones, seven dedicated phase-review milestones and 47 unchecked implementation tasks (27 delivery, 13 milestone reviews and seven phase reviews). All six predefined scopes have been processed in order with current per-document QC; DOCS-009 stays unchecked. After this DOCS-008 commit is pushed/read back and issue 8 closed/read back, stop. Do not run whole-package QC, merge design-docs/main, close milestone 1, activate implementation objects or create releases.
+Append Phase 7 / milestones 7.1–7.3 / T-041–T-047. Phases 1–6 and T-001–T-040 retain exact prior content. The final hierarchy contains seven phases, 12 delivery milestones, seven dedicated phase-review milestones and 47 unchecked implementation tasks (28 delivery, 12 milestone reviews and seven phase reviews). All six predefined scopes have been processed in order with current per-document QC; DOCS-009 stays unchecked. After this DOCS-008 commit is pushed/read back and issue 8 closed/read back, stop. Do not run whole-package QC, merge design-docs/main, close milestone 1, activate implementation objects or create releases.
 - DOCS-008: `TASKS.md` SHA-256 `0d24332343f1f5c530b2e1075f0889923eab910832443cef9bb15cb440ce5b7e`; `HANDOFF.md` SHA-256 `864be2cb9d92332680452e9e0f84cbd0e892ca31afb40fa074bacd32dae3d2a5`. Autodoc preapproval. Final TASKS conformance Ready: 47 unique unchecked tasks across seven phases, current R01-R13/PLAN coverage and strict earlier-range preservation. Stop after this verified issue closure, before DOCS-009/package QC/integration/implementation. Completion commit requires push/readback, then issue 8 closure/readback before progression.
+
+## Final DOCS-008 readback
+
+The owning TASKS shape/readback check derived seven phases, 12 delivery milestones, seven phase-review milestones and 47 unchecked tasks: 28 delivery, 12 milestone reviews and seven phase reviews. This corrects an interim preparation-summary tally of 13/27; the authoritative PLAN/TASKS hierarchy and per-milestone count reports were unchanged. All five earlier PLAN/TASKS prefixes were compared exactly. Issues 1–8 were freshly observed closed, issue 9 and milestone 1 open. No whole-package QC was run and no DOCS-QC-REPORT exists. Completion source: `6dd80ef88e00d0e23b69866df8b91f18a000c9b2`.
