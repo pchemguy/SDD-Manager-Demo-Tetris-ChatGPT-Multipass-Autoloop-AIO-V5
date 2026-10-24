@@ -41,3 +41,7 @@ No component imports a browser adapter from the core. Geometry is shared because
 | Grounding policy | Controller owns active-time grounding/deadline and processes due transitions before actions at equal timestamps. Reducer owns the resulting lock and hold-reset state. | Controlled clock at deadline minus one, deadline and regrounding. |
 
 The snapshot includes held kind and projected landing, and the input adapter adds C and Space as non-repeating actions. The view never updates the bag, hold allowance or deadline. Fresh incoming pieces reset their own timing; hold permission resets only after lock or restart.
+
+## Dynamic visibility predicate
+
+The landing component exposes occupied projected rows to a pure ghost-visibility predicate. Its result is a boolean consumed by the snapshot/view adapter; it does not mutate game state, board, source or timers. Tests supply projected-cell fixtures around rows 9 and 10 and compare rendering eligibility while retaining the same hard-drop destination. The renderer retains existing coincident/game-over suppression.
