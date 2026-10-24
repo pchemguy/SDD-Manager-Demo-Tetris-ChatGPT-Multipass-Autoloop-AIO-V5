@@ -42,3 +42,9 @@ A shared pure landing projection serves ghost and hard drop. Rotation tries a bo
 ## Ghost visibility
 
 A pure visibility predicate consumes projected occupied cells; the browser view draws only when it permits the ghost. Projection remains the core landing responsibility even when the ghost is hidden, so hard drop behavior is independent of visibility. The board midline is a geometric rule over zero-based occupied rows, not the piece square origin or its center.
+
+## Penetrator collision policy
+
+The landing/projector boundary selects ordinary or penetrator semantics from reducer-owned active-mode state. Ordinary play retains continuous collision-limited descent. Penetrator traversal ignores settled occupancy but keeps board bounds and a valid terminal-placement invariant. The same policy supplies movement/rotation eligibility, terminal grounding, ghost and hard drop, preventing parallel definitions of a special landing.
+
+The reducer owns bonus count and activation state; a successful activation is one atomic bonus-spend/mode transition. The board still validates all inserted cells at lock and never erases occupied transit cells. Settled cells retain appearance metadata so white penetrator cells remain visually identifiable without retaining the ability. Views show one bonus symbol per available activation and cannot earn or spend bonuses.
