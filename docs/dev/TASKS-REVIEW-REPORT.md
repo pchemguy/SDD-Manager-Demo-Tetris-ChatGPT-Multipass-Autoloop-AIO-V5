@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for the selected documentation boundary; implementation not authorized. Reviewed `TASKS.md` SHA-256 `18aed12b67ce8dce9a7f9d4736527a7dfd7ecc9413798b4403e471744ef0f6f2`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for the selected documentation boundary; implementation not authorized. Reviewed `TASKS.md` SHA-256 `8ab25d5e54e0721e0a8ad286d3aff28271eed205cc41389fe8ca93898d8b1725`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -14,6 +14,23 @@ Milestones 1.1/1.2 have three bounded delivery tasks each and an explicit final 
 | --- | --- | --- | --- |
 | 1.1 | 3 | T-004 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
 | 1.2 | 3 | T-008 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 1
+
+Review by the owning sdd-tasks role on 2026-10-24. Governing identities: `PLAN.md` SHA-256 `212f2a0ea46d846b38c246df814702ed4e672f50d49f001cc14507953ce85417`; `PLAN-REVIEW-REPORT.md` SHA-256 `415a72db733cb5a47d027c31dd5f5053b495d690b938a9e96b6c6dedf76a680c`; `layout.md` SHA-256 `cf4f0ebfe80dffe8bf3e1f4a9209fef785df0ae0a319a0a756796c2f5d33d313`; `SPEC.md` SHA-256 `cb7fa312af534a7cb173f86e959de4071f6bc6465a4d92ef5e05a66feeffd051`; `DECOMPOSITION.md` SHA-256 `b9325219ce1fefe7cf4b22cc6a931156d6a07103a0b02ece629b17f1a73c13b5`.
+
+Current hierarchy has 21 unique unchecked tasks. Phase 2 has T-010/T-011 delivery, T-012 milestone review and T-013 phase review; the two-task group is a cohesive supply/hold integration. Phase 3 separates kick/ghost delivery from timer/drop integration, ending each delivery group in review and final phase milestone in T-021 only. Dependencies follow predecessor closures; R08-R09 and each new PLAN exit are covered. Strict Phase 1 prefix is unchanged.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| 1.1 | 3 | T-004 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 1.2 | 3 | T-008 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 2.1 | 2 | T-012 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 3.1 | 2 | T-016 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 3.2 | 3 | T-020 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
 
 
 Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
