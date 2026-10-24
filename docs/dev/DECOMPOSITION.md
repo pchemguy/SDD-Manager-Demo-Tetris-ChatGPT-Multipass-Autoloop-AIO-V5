@@ -67,3 +67,14 @@ Input adds non-repeating B activation. Hold checks the active penetrator flag be
 | Queue peek / preview view | Source owns next kind; read-only snapshot provides it and a visibility flag. | Preview renderer; deterministic order and toggle/no-consumption fixtures. |
 
 Hold and hard-drop guards read current availability before any mutation. Active penetrator hold prohibition still takes precedence. Visibility combines the configured mode with existing playing/coincident rules. Restart resets bank, hold and pieces but retains desired settings; it never constructs another settings model.
+
+## Persistence components
+
+| Component | Owns / provides | Consumer and seam |
+| --- | --- | --- |
+| Settings codec/resolver | Canonical tokens, per-field validity, duplicate handling and URL/cookie/default selection; explicit URL cookie intents. | Bootstrap coordinator; table-driven raw-source cases without browser APIs. |
+| Cookie adapter | Read matching cookie names and best-effort one-field writes with declared path/lifetime attributes; report success/failure. | Resolver/coordinator; simulated blocked/malformed/duplicate cookies and isolated browser contexts. |
+| URL adapter | Observe query values, preserve unrelated values/hash and replace the selected setting parameter without navigation. | Resolver/change coordinator; URLs with mixed/duplicate/invalid fields and History API failures. |
+| Bootstrap/change coordinator | Resolve before first game creation; apply desired model updates, dispatch independent write intents and expose a concise persistence-unavailable state when needed. | Existing settings model/form; observed first-piece policy and reload/change cases. |
+
+Neither cookie nor URL adapters contain default precedence rules. The pure resolver does not perform writes. Existing controls still display desired settings; the controller still latches effective piece policies at incoming spawn. Failed persistence never rolls back a valid live selection or causes a second game mount.
