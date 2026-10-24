@@ -4,7 +4,7 @@
 
 - Mode and source: autodoc/autoloop, explicitly requested by the user on 2026-10-24 for this repository and the six scopes below.
 - Multipass delivery: strict; no flexible integration permission was given. Later scopes append bounded phases/tasks and preserve earlier IDs, names, scope, milestone membership, order, dependencies and exits.
-- Current pass: 2, predefined cumulative scope 2 from the retained sequence. Cursor DOCS-002 after verified reopening; earlier document acceptance is historical.
+- Current pass: 3, predefined cumulative scope 3 from the retained sequence. Cursor DOCS-002 after verified reopening; earlier document acceptance is historical.
 - Approval basis: the user approved the first PROJECT and presented cross-scope decisions on 2026-10-24. Later PROJECT approvals are waived, announced in chat before that first checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. This approval authorizes the predefined sequence/resets. The presented product choices are accepted within their stated applicability.
 - Delegation after first approval: resolve later material decisions within the predefined scope, record the rationale and explain consequential choices in chat without adding approval pauses.
 - Stop: after Pass 6 DOCS-008 publication and issue closure, before DOCS-009, whole-package QC, documentation integration or implementation. Implementation will require subsequent authorization; releases apply only after verified integrated implementation phases.
@@ -72,7 +72,7 @@ Material unresolved decisions: none at the initial approved scope. TypeScript/Ca
 
 ## Pending transitions
 
-Record first PROJECT approval atomically with DOCS-002 completion, publish/read back and close/read back issue 2 before ARCHITECTURE. The GitHub connector returned integration-access 403 on issue comment/update attempts with no effect; supplied-token REST access then posted completion evidence, closed issue 1 and verified its state. Use the eligible saved repository credential for subsequent authorized tracking operations.
+Publish/read back this reset into Pass 3, reopen/read back issues 2–9 and verify milestone 1 open; then revise PROJECT. Preserve inherited decisions and strict prior delivery ranges.
 
 ## Pass 1 document evidence
 
@@ -109,3 +109,7 @@ Inherited timing/hold/source decisions are accepted at initial review. Delegated
 
 Appended Phase 2 / T-010–T-013 and Phase 3 / T-014–T-021. Phase 1 / T-001–T-009 retained byte for byte; exact prefix comparison runs before PLAN/TASKS publication. Inherited cross-scope decisions remain active.
 - DOCS-008: `TASKS.md` SHA-256 `8ab25d5e54e0721e0a8ad286d3aff28271eed205cc41389fe8ca93898d8b1725`; `HANDOFF.md` SHA-256 `0a3742451dc462cb096c57b848598a205ad71706e4f18240332fb2e9c42d4762`. Autodoc preapproval. TASKS QC Ready with 21 unique unchecked tasks, new R08-R09 coverage and exact protected prior prefix. After issue closure, reset for predefined Pass 3; DOCS-009 remains unchecked. Completion commit requires push/readback, then issue 8 closure/readback before progression.
+
+## Reset into Pass 3
+
+Prior Pass 2 DOCS-008 checkpoint `b57c538f18118fd9dc5c1953fd1596a18f370809` was published/read back and issue 8 closed. Initial PROJECT approval and autodoc/autoloop authorize this next predefined scope and reset. All existing product documents and protected phase/task blocks are retained. DOCS-001 remains complete; DOCS-002–009 are unchecked. Publish this reset, reopen/read back the same issues 2–9, and verify milestone 1 open before document revision. No package QC, integration or implementation is selected.
