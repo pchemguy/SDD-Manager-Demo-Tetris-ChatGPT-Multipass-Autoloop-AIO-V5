@@ -4,7 +4,7 @@
 
 - Mode and source: autodoc/autoloop, explicitly requested by the user on 2026-10-24 for this repository and the six scopes below.
 - Multipass delivery: strict; no flexible integration permission was given. Later scopes append bounded phases/tasks and preserve earlier IDs, names, scope, milestone membership, order, dependencies and exits.
-- Current pass: 6, predefined cumulative scope 6 from the retained sequence. Cursor DOCS-002 after verified reopening; earlier document acceptance is historical.
+- Current pass: 6, cumulative scope 6; DOCS-002 completion recorded below. After its verified publication/issue closure, continue to DOCS-003.
 - Approval basis: the user approved the first PROJECT and presented cross-scope decisions on 2026-10-24. Later PROJECT approvals are waived, announced in chat before that first checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. This approval authorizes the predefined sequence/resets. The presented product choices are accepted within their stated applicability.
 - Delegation after first approval: resolve later material decisions within the predefined scope, record the rationale and explain consequential choices in chat without adding approval pauses.
 - Stop: after Pass 6 DOCS-008 publication and issue closure, before DOCS-009, whole-package QC, documentation integration or implementation. Implementation will require subsequent authorization; releases apply only after verified integrated implementation phases.
@@ -72,7 +72,7 @@ Material unresolved decisions: none at the initial approved scope. TypeScript/Ca
 
 ## Pending transitions
 
-Publish/read back this reset into Pass 6, reopen/read back issues 2–9 and verify milestone 1 open; then revise PROJECT. Preserve inherited decisions and strict prior delivery ranges.
+Publish/read back the current DOCS-002 completion and close/read back issue 2; then continue to DOCS-003. Git/provider observations settle these effects; earlier pass evidence is historical. Milestone 1 and DOCS-009 remain open.
 
 ## Pass 1 document evidence
 
@@ -179,3 +179,11 @@ Append Phase 6 / milestones 6.1–6.3 / T-034–T-040. Phases 1–5 and T-001–
 ## Reset into Pass 6
 
 Prior Pass 5 DOCS-008 checkpoint `325ac6c9e59dfb157531530d8ccdc30bb9547a91` was published/read back and issue 8 closed. Initial PROJECT approval and autodoc/autoloop authorize this next predefined scope and reset. All existing product documents and protected phase/task blocks are retained. DOCS-001 remains complete; DOCS-002–009 are unchecked. Publish this reset, reopen/read back the same issues 2–9, and verify milestone 1 open before document revision. No package QC, integration or implementation is selected.
+
+## Pass 6 decisions
+
+Carry forward per-setting URL → cookie → default resolution and explicit-default saving. Delegated format: query names equal the six setting keys; booleans serialize as 1/0, enums as their canonical tokens, and cookies are named tetris_<key>. Empty/invalid/duplicate known URL values fall through without overwriting valid cookies. Duplicate cookie names are invalid for that setting. Read sources before first piece initialization; save valid explicit URL values to cookies, retain omitted values and unrelated URL data. Persistence failure preserves usable in-memory play and never substitutes another storage system. Append Phase 7 / T-041–T-047; earlier ranges remain exact. Final stop remains DOCS-008, before whole-package QC/integration/implementation. Reset/reopening verified.
+
+## Pass 6 document evidence
+
+- DOCS-002: `PROJECT.md` SHA-256 `34b51dbd8cba3784627f59fe710fe07f69c63c0dcf341c345ff5f41ce8a842ca`. Autoloop PROJECT preapproval. Full cumulative scope includes cookie/URL persistence with independent precedence, explicit-value saving and omitted-cookie retention; no additional product capability is introduced. Completion commit requires push/readback, then issue 2 closure/readback before progression.

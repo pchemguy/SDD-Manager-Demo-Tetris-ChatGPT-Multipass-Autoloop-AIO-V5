@@ -17,7 +17,7 @@ The interface presents the board, current score, controls and game status clearl
 - Fixed-interval gravity, with a default full grounded-interval lock and selectable failed-down locking; hard drop can follow that policy or lock immediately.
 - Hold once per locked-piece cycle, a landing ghost hidden when its projection reaches into the upper half, and keyboard hard drop.
 - Earn up to three penetrator bonuses from four-line clears. A bonus activates a white current piece that traverses occupied cells until locking at a legal nonoverlapping position; hold is disabled while active. Ghost and hard drop share its deepest valid landing.
-- A side panel with six session-only game settings and an optional next-piece preview. Ghost visibility supports hide, dynamic and show; hard drop, next preview and hold can be enabled or disabled. Reload starts with defaults; restart retains current settings.
+- A side panel with six persistent game settings and an optional next-piece preview. Ghost visibility supports hide, dynamic and show; hard drop, next preview and hold can be enabled or disabled. Reload resolves each setting from its explicit URL value, saved cookie or default. Control changes update its cookie and URL parameter; restart retains current settings.
 - Simultaneous removal of complete rows, downward compaction and line-clear scoring.
 - Spawn-based game over and repeatable restart.
 - A readable board with nonwhite regular-piece colors and white penetrator cells and accessible HTML status and controls.
