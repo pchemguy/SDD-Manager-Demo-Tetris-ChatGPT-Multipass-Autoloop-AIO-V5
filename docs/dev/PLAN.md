@@ -117,3 +117,27 @@ Exit: R11 cap/award/appearance/indicator and R09-R10 integration cases pass in b
 ### Milestone 5.3 — Phase review
 
 After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify legal terminal insertion without destroyed cells, atomic 0–3 bonus lifecycle, disabled active hold, shared ghost/drop geometry and both-browser appearance/timing evidence Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
+
+## Phase 6 — Session game configuration
+
+Outcome: Control the game through six side-panel settings with next-piece preview during one page session.
+
+Scope and boundary: R12 schema/controls, live guards, per-piece policy latching and queue preview. Reload defaults; no persistence. Preserve penetrator and earlier gameplay under applicable selected policies.
+
+Prerequisite: Phase 5 completed, reviewed, integrated and published. Target version: v0.6.0.
+
+### Milestone 6.1 — Validated game controls
+
+Demonstrate six labeled controls with safe live changes and next-piece lock-policy application.
+
+Exit: R12 validation, defaults, desired/effective latching and disabled-action boundaries pass; demonstrate policy changes for continue/amend/simplify/stop feedback A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 6.2 — Preview and configuration interactions
+
+Demonstrate next preview and configuration changes through complete ordinary/penetrator play.
+
+Exit: R12 non-consuming preview, focus/restart/reload and cross-feature matrix pass in both browsers A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 6.3 — Phase review
+
+After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify all setting values/defaults, locking matrix, live changes, held/preview sequence invariants, native focus and session reload/restart in both browsers Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
