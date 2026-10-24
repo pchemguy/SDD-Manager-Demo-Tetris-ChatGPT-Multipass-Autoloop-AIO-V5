@@ -56,3 +56,14 @@ The landing component exposes occupied projected rows to a pure ghost-visibility
 | Appearance/indicator view | Snapshot supplies white appearance for active/settled penetrator cells and bank symbols; normal kind color remains independent. | Cell-color and 0–3-symbol screenshot/DOM assertions. |
 
 Input adds non-repeating B activation. Hold checks the active penetrator flag before any source/slot mutation. Controller grounding uses the selected policy's terminal status; activation/motion cannot independently refresh an unchanged deadline. Board cells may store kind plus white-appearance metadata, but never an active penetration ability.
+
+## Settings model and controls
+
+| Component | Owns / exposes | Consumers and verification |
+| --- | --- | --- |
+| Settings schema/model | Six typed fields, allowed values, defaults and validated per-field updates. Desired settings live for the mounted page. | Controller and HTML form; pure invalid-value/default/update checks. |
+| Effective piece policy | Controller latches general/hard-drop policies when an incoming piece is spawned, including through hold. | Existing lock/drop transitions; fake-clock mid-piece policy-change cases. |
+| Settings form adapter | Labeled native controls show desired values and submit changes; does not consume gameplay keys while focused. | Model update port; browser label/focus/change cases. |
+| Queue peek / preview view | Source owns next kind; read-only snapshot provides it and a visibility flag. | Preview renderer; deterministic order and toggle/no-consumption fixtures. |
+
+Hold and hard-drop guards read current availability before any mutation. Active penetrator hold prohibition still takes precedence. Visibility combines the configured mode with existing playing/coincident rules. Restart resets bank, hold and pieces but retains desired settings; it never constructs another settings model.
