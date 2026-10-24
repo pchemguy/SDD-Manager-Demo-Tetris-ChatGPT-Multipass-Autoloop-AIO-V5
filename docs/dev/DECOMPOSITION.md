@@ -29,3 +29,15 @@ Rejected placement is an ordinary result, not an exception. Spawn obstruction is
 ## Dependency assessment
 
 No component imports a browser adapter from the core. Geometry is shared because occupied-cell rules must agree between collision and drawing. Board owns settled data; reducer owns the active piece; controller owns elapsed time. These responsibilities give movement and row-clearing separate tests without an artificial class hierarchy. SPEC supplies precise geometry, input, timing and acceptance values.
+
+## Supply, rotation and landing components
+
+| Component | Ownership and collaboration | Verification seam |
+| --- | --- | --- |
+| Bag source | Source strategy owns the seven-kind permutation/cursor, driven by injected randomness; no view consumption. | Two complete bags and deterministic shuffle boundaries. |
+| Hold transition | Reducer owns stored kind and used-this-cycle flag; spawns incoming kind in orientation 0, resets timing through the controller and consumes a draw only on empty hold. | Empty/swap/denied hold and blocked incoming spawn. |
+| Rotation resolver | Geometry enumerates rotated cells; resolver tries the specified kick offsets with board validity, committing only the first legal candidate. | Left/right wall, floor and occupied-cell fixtures. |
+| Landing projector | Pure function returns the ordinary piece's lowest continuously reachable valid pose by downward steps. | Projected pose equals hard-drop destination. |
+| Grounding policy | Controller owns active-time grounding/deadline and processes due transitions before actions at equal timestamps. Reducer owns the resulting lock and hold-reset state. | Controlled clock at deadline minus one, deadline and regrounding. |
+
+The snapshot includes held kind and projected landing, and the input adapter adds C and Space as non-repeating actions. The view never updates the bag, hold allowance or deadline. Fresh incoming pieces reset their own timing; hold permission resets only after lock or restart.
