@@ -15,7 +15,7 @@ The interface presents the board, current score, controls and game status clearl
 - All seven tetrominoes, supplied by shuffled seven-piece bags.
 - Grid-aligned movement and rotation with wall kicks, rejecting placements outside the board or overlapping settled cells.
 - Fixed-interval gravity and locking after a full interval from grounding, including after hard drop.
-- Hold once per locked-piece cycle, a landing ghost and keyboard hard drop.
+- Hold once per locked-piece cycle, a landing ghost hidden when its projection reaches into the upper half, and keyboard hard drop.
 - Simultaneous removal of complete rows, downward compaction and line-clear scoring.
 - Spawn-based game over and repeatable restart.
 - A readable board with distinct nonwhite piece colors and accessible HTML status and controls.
