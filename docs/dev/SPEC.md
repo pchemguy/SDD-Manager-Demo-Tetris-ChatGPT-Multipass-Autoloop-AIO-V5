@@ -77,10 +77,18 @@ Acceptance: two complete bags each contain all kinds; hold-empty consumes one dr
 
 For a non-O rotation, test offsets (0,0), (-1,0), (1,0), (-2,0), (2,0), (0,-1), (0,-2), in that order, relative to the original origin; accept the first wholly in-bounds, nonoverlapping rotated pose. Offsets use R01 coordinates. If none is legal, retain the exact prior state. O does not translate. This candidate order applies equally to clockwise/counterclockwise turns and I/J/L/S/T/Z.
 
-Ordinary landing is the deepest pose reachable through successive legal downward steps from the current pose, stopping before the first blocked step. Draw its occupied cells as a visually distinct translucent/outlined ghost without modifying the board. Suppress the ghost when it coincides with the active pose, in game over or without an active piece. Space moves the active piece to that exact target; it does not award drop points or consume a source item until lock.
+Ordinary landing is the deepest pose reachable through successive legal downward steps from the current pose, stopping before the first blocked step. Draw its occupied cells as a visually distinct translucent/outlined ghost subject to R10, without modifying the board. Suppress the ghost when it coincides with the active pose, in game over or without an active piece. Space moves the active piece to that exact target; it does not award drop points or consume a source item until lock.
 
 Production lock delay is 1000 ms of active time from first becoming grounded. Grounded means the next ordinary downward step would fail. Establish grounding immediately after spawn, movement, rotation or drop, not at the next gravity tick. At deadline lock once even without a failed-down action. A failed downward attempt before deadline is a no-op. Successful movement/rotation while still grounded and repeated/zero-distance hard drops retain the original deadline. Leaving support cancels it; landing again starts a fresh interval. Due locks are processed before an action stamped at the same active timestamp. Suspension preserves elapsed active time; restart and incoming-piece changes clear the outgoing deadline.
 
 The classic failed-down strategy remains a core policy for its scoped behavior; it is not exposed by a setting here. Ghost and hard drop have no independent collision rules.
 
 Acceptance: wall/floor fixtures prove candidate order and rejection; ghost equals hard-drop target; a grounded piece survives 999 ms and locks at 1000 ms. Grounded shifts/drop cannot extend the deadline; leaving support and regrounding can start a new one. Hard drop midway through a gravity cycle still gets a full grounded interval. Verify real input, ghost rendering, hold and hard-drop-to-lock in both browsers.
+
+## R10 — Dynamic ghost visibility
+
+For the 20-row board, the lower half is rows 10–19 inclusive. Show the ghost only when every projected occupied cell has y >= 10, in addition to the existing active/playing/noncoincident conditions. Equivalently, its minimum occupied row is at least 10. Any projected cell at row 9 or above hides the entire ghost; do not clip it or use its center, square origin or active-piece height.
+
+Recompute visibility from the current landing result after each relevant state change. Movement or rotation can hide or restore it immediately. Visibility never changes the landing result, hard-drop destination, board, draw order, hold allowance or deadline.
+
+Acceptance: projected minimum y values 9 and 10 produce hidden and visible respectively; a four-cell projection spanning rows 9 and 10 is hidden. Move/rotate between fixtures and observe hide/restore in both browsers while hard drop still reaches the same computed landing. Existing coincident/game-over suppression remains applicable.
