@@ -4,7 +4,7 @@
 
 - Mode and source: autodoc/autoloop, explicitly requested by the user on 2026-10-24 for this repository and the six scopes below.
 - Multipass delivery: strict; no flexible integration permission was given. Later scopes append bounded phases/tasks and preserve earlier IDs, names, scope, milestone membership, order, dependencies and exits.
-- Current pass: 4, cumulative scope 4; DOCS-008 completion recorded below. After its verified publication/issue closure, reset into predefined Pass 5.
+- Current pass: 5, predefined cumulative scope 5 from the retained sequence. Cursor DOCS-002 after verified reopening; earlier document acceptance is historical.
 - Approval basis: the user approved the first PROJECT and presented cross-scope decisions on 2026-10-24. Later PROJECT approvals are waived, announced in chat before that first checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. This approval authorizes the predefined sequence/resets. The presented product choices are accepted within their stated applicability.
 - Delegation after first approval: resolve later material decisions within the predefined scope, record the rationale and explain consequential choices in chat without adding approval pauses.
 - Stop: after Pass 6 DOCS-008 publication and issue closure, before DOCS-009, whole-package QC, documentation integration or implementation. Implementation will require subsequent authorization; releases apply only after verified integrated implementation phases.
@@ -72,7 +72,7 @@ Material unresolved decisions: none at the initial approved scope. TypeScript/Ca
 
 ## Pending transitions
 
-Publish/read back the current DOCS-008 completion and close/read back issue 8; then reset into predefined Pass 5. Git/provider observations settle these effects; earlier pass evidence is historical. Milestone 1 and DOCS-009 remain open.
+Publish/read back this reset into Pass 5, reopen/read back issues 2–9 and verify milestone 1 open; then revise PROJECT. Preserve inherited decisions and strict prior delivery ranges.
 
 ## Pass 1 document evidence
 
@@ -153,3 +153,7 @@ Initial activation/hold/bonus/white-cell decisions remain accepted. Delegated pr
 
 Append Phase 5 / milestones 5.1–5.3 / T-026–T-033. Phases 1–4 and T-001–T-025 retain their exact prior content. Initial cross-scope decisions and delegated terminal/rotation precision remain active.
 - DOCS-008: `TASKS.md` SHA-256 `b643065085d8dec4751fdd51a9c97d4ffd910ab178d1a99941bb2bf582d567f1`; `HANDOFF.md` SHA-256 `e49081c63f9001b211c373617e13f533264401d3878aeafda505301ca0b195ee`. Autodoc preapproval. TASKS QC Ready with 33 unique unchecked tasks and strict prior prefix preservation. Reset for predefined Pass 5 after closure; DOCS-009 remains outside scope. Completion commit requires push/readback, then issue 8 closure/readback before progression.
+
+## Reset into Pass 5
+
+Prior Pass 4 DOCS-008 checkpoint `180dbe7a0f22af7ed590ee399bd63c4467d9a970` was published/read back and issue 8 closed. Initial PROJECT approval and autodoc/autoloop authorize this next predefined scope and reset. All existing product documents and protected phase/task blocks are retained. DOCS-001 remains complete; DOCS-002–009 are unchecked. Publish this reset, reopen/read back the same issues 2–9, and verify milestone 1 open before document revision. No package QC, integration or implementation is selected.
