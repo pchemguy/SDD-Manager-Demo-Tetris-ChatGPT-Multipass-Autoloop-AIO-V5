@@ -26,3 +26,7 @@ Keep `dist/`, runner output, screenshots/videos, local browser binaries/state an
 Existing `.agents/` packages, root governing policies, disclosure/usage files and `docs/ai-logs/` remain separate from product code. Manual transcripts are historical data, outside routine validation. Preserve the ignored repository token convention. No modification of `/pyenv` is permitted.
 
 The intended toolchain is TypeScript/Vite with unit checks and Playwright. T-001 establishes actual scripts and pins dependency versions; this document does not claim that commands have already been installed or verified. On Windows, follow the root CMD shell policy.
+
+## Supply and landing ownership
+
+`src/core/source.ts` owns bag/uniform strategies; `src/core/game.ts` owns hold state and actions. `src/core/rotation.ts` owns kick resolution, `src/core/landing.ts` owns projection, and `src/app/session.ts` owns grounding deadlines. Unit fixtures remain under core/app test homes; browser cases and held/ghost presentation remain under the existing browser adapters. These modules separate independent change/test responsibilities without duplicating board geometry or state.
