@@ -24,17 +24,17 @@ Spawn orientation is 0, with square origin x = floor((10 - square size) / 2), y 
 
 ## R02 — Spawn and randomness
 
-Start/restart creates an empty board, score zero and one active piece. Every source draw independently chooses one of the seven kinds with equal probability. A test source may supply a known sequence. A draw is consumed only when a piece is required, never by rendering. If the spawn pose is blocked, set game over without replacing settled cells or awarding points. Game-over state has no controllable active piece.
+Start/restart creates an empty board, score zero and one active piece. The classic source strategy independently draws each of the seven kinds with equal probability. Production uses the seven-bag strategy in R08. A test source may supply a known sequence. A draw is consumed only when a piece is required, never by rendering. If the spawn pose is blocked, set game over without replacing settled cells or awarding points. Game-over state has no controllable active piece.
 
 ## R03 — Movement and controls
 
 Left/Right move one column; Down attempts one row downward. Up or X rotates clockwise; Z rotates counterclockwise. Enter restarts when the game surface has focus. A visible HTML restart button performs the same transition. Recognized game keys prevent page scrolling only while the game surface has focus; focused HTML controls retain native keyboard behavior.
 
-Each keydown, including native repeat, supplies one action. There is no independent repeat timer. Reject out-of-bounds or overlapping moves/rotations without changing state or consuming a source draw. Rotation uses only the current origin, without position adjustment. Actions except restart are ignored during game over or suspension. Releasing focus clears transient input state.
+Movement/rotation keydowns, including native repeat, supply one action. C and Space are non-repeating actions: ignore their native-repeat keydowns. There is no independent repeat timer. Reject out-of-bounds or overlapping moves/rotations without changing state or consuming a source draw. The classic rotation strategy uses only the current origin; production uses the kick resolver in R09. Actions except restart are ignored during game over or suspension. Releasing focus clears transient input state.
 
 ## R04 — Gravity and locking
 
-Gravity attempts downward movement every 1000 ms of active time. A successful downward attempt changes y by one. An attempted downward move that is blocked locks the current valid pose immediately; failed horizontal moves or rotations do not lock. Locking inserts all four cells atomically, clears rows and awards score, then requests the next piece. Reset the gravity accumulator when a fresh active piece spawns so an old remainder cannot immediately move it.
+Gravity attempts downward movement every 1000 ms of active time. A successful downward attempt changes y by one. Under the classic failed-down strategy, a blocked downward attempt locks the valid pose immediately. Production uses the full-interval strategy in R09. Failed horizontal moves or rotations do not lock. Locking inserts all four cells atomically, clears rows and awards score, then requests the next piece. Reset the gravity accumulator when a fresh active piece spawns so an old remainder cannot immediately move it.
 
 Gravity and user actions are serialized. A clock advance containing several due intervals processes them in order; stop at game over. Backward or nonfinite time samples are ignored. Focus loss or hidden page suspends elapsed active time; resumption resets the clock baseline, with no background catch-up. Restart clears all timing state.
 
@@ -64,3 +64,23 @@ Build a static asset distribution that operates after serving it over HTTP witho
 | R06–R07 | In both browsers, start, move, rotate, clear a line, reach game over and restart through real app inputs; inspect representative Canvas pixels/screenshots and HTML status; verify repeated isolated context/page cycles and teardown. |
 
 Check selection may combine scenarios where one observation establishes several contracts. Implementation evidence must distinguish simulated rule transitions from actual browser interaction and rendering.
+
+## R08 — Seven-bag supply and hold
+
+Production draws from a uniformly shuffled permutation containing each kind once, then a fresh bag. Use injected random draws for deterministic checks; a Fisher–Yates permutation with j = floor(u * (i + 1)) is acceptable. The classic uniform source remains a core strategy without a UI selector. Restart clears bag/cursor and hold, starts a fresh bag and resets the hold allowance.
+
+C holds the active kind at most once between locks. Empty hold stores it and consumes one next source kind; occupied hold swaps kinds without consuming a draw. Incoming pieces use the R01 spawn pose, orientation 0 and fresh gravity/grounding timing. The used flag stays set until lock, including after an empty-slot hold. Denied repeated hold is a complete no-op. A blocked incoming spawn ends the game without score or settled-board changes; the accepted hold-slot update remains. Show the stored kind, or an empty hold indicator, in HTML/Canvas side presentation.
+
+Acceptance: two complete bags each contain all kinds; hold-empty consumes one draw, hold-swap consumes none, repeat is denied and the next lock restores allowance. Restart resets bag/hold. Blocked held spawn reaches game over. Observe C and the hold display through the actual app in both browsers.
+
+## R09 — Rotation, landing ghost, hard drop and interval lock
+
+For a non-O rotation, test offsets (0,0), (-1,0), (1,0), (-2,0), (2,0), (0,-1), (0,-2), in that order, relative to the original origin; accept the first wholly in-bounds, nonoverlapping rotated pose. Offsets use R01 coordinates. If none is legal, retain the exact prior state. O does not translate. This candidate order applies equally to clockwise/counterclockwise turns and I/J/L/S/T/Z.
+
+Ordinary landing is the deepest pose reachable through successive legal downward steps from the current pose, stopping before the first blocked step. Draw its occupied cells as a visually distinct translucent/outlined ghost without modifying the board. Suppress the ghost when it coincides with the active pose, in game over or without an active piece. Space moves the active piece to that exact target; it does not award drop points or consume a source item until lock.
+
+Production lock delay is 1000 ms of active time from first becoming grounded. Grounded means the next ordinary downward step would fail. Establish grounding immediately after spawn, movement, rotation or drop, not at the next gravity tick. At deadline lock once even without a failed-down action. A failed downward attempt before deadline is a no-op. Successful movement/rotation while still grounded and repeated/zero-distance hard drops retain the original deadline. Leaving support cancels it; landing again starts a fresh interval. Due locks are processed before an action stamped at the same active timestamp. Suspension preserves elapsed active time; restart and incoming-piece changes clear the outgoing deadline.
+
+The classic failed-down strategy remains a core policy for its scoped behavior; it is not exposed by a setting here. Ghost and hard drop have no independent collision rules.
+
+Acceptance: wall/floor fixtures prove candidate order and rejection; ghost equals hard-drop target; a grounded piece survives 999 ms and locks at 1000 ms. Grounded shifts/drop cannot extend the deadline; leaving support and regrounding can start a new one. Hard drop midway through a gravity cycle still gets a full grounded interval. Verify real input, ghost rendering, hold and hard-drop-to-lock in both browsers.
