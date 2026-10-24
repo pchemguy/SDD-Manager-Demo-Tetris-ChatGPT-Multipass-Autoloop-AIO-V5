@@ -33,3 +33,45 @@ Exit: R04–R07 lock/compaction/scoring/restart/focus and production delivery pa
 ### Milestone 1.3 — Phase review
 
 After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify a complete classic game, deterministic rule boundaries, both-browser interaction/rendering/restart evidence and a served production build Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
+
+## Phase 2 — Piece supply and hold
+
+Outcome: Play with predictable seven-kind bags and one-use hold.
+
+Scope and boundary: R08 source/hold behavior; preserve classic movement, score and lifecycle. Landing/rotation controls are outside this phase.
+
+Prerequisite: Phase 1 completed, reviewed, integrated and published. Target version: v0.2.0.
+
+### Milestone 2.1 — Bag and hold play
+
+Demonstrate C hold with a visible stored piece and bag-driven play.
+
+Exit: R08 source consumption/hold allowance boundaries pass and the integrated hold path informs continue/amend/simplify/stop feedback A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 2.2 — Phase review
+
+After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify seven-bag composition, empty/swap/rejected hold, blocked incoming spawn and restart in rules and both-browser UI Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
+
+## Phase 3 — Rotation and landing controls
+
+Outcome: Use wall kicks, visible landing guidance and hard drop with a full grounded interval.
+
+Scope and boundary: R09 kicks, ordinary projection, ghost, hard drop and interval timing. Preserve R08 supply/hold and classic clearing/scoring. Dynamic visibility is outside this phase.
+
+Prerequisite: Phase 2 completed, reviewed, integrated and published. Target version: v0.3.0.
+
+### Milestone 3.1 — Rotation and landing guidance
+
+Demonstrate kicked rotations and a ghost predicting the ordinary landing.
+
+Exit: R09 candidate order and ghost target/rendering pass; demonstrate wall/floor play for continue/amend/simplify/stop feedback A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 3.2 — Drop and grounded timing
+
+Demonstrate hard-drop repositioning with a predictable full interval before lock.
+
+Exit: R09 timer/drop/reset/suspension boundaries and both-browser interactions pass A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 3.3 — Phase review
+
+After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify shared ghost/drop positions, kick-order/rejection fixtures, complete interval/reset semantics and both-browser regressions Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.

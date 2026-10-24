@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for TASKS. Reviewed `PLAN.md` SHA-256 `6848343264d64af5f6332af19ebaa39208b2057e710c521ae9145b1e12330a27`; `layout.md` SHA-256 `371594330527d54c3268062f473afa13d4e1605576f1eb407aab240e98f02efa`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for layout; TASKS held pending combined layout review. Reviewed `PLAN.md` SHA-256 `212f2a0ea46d846b38c246df814702ed4e672f50d49f001cc14507953ce85417`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -26,6 +26,21 @@ Combined placement review maps every decomposed component to source and checks, 
 | Group | Delivery count | Excluded review units | Assessment |
 | --- | --- | --- | --- |
 | Phase 1 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 2
+
+Review by the owning sdd-plan role on 2026-10-24. Governing identities: `SPEC.md` SHA-256 `cb7fa312af534a7cb173f86e959de4071f6bc6465a4d92ef5e05a66feeffd051`; `SPEC-REVIEW-REPORT.md` SHA-256 `88092efe86aec3f826544cd47ccd987e4e52f8a809ae264ee6454f489897cf31`; `ARCHITECTURE.md` SHA-256 `d479065413a80ddf85ada6e22750e9285af9f73b03415cff22ac628a902a9edd`; `DECOMPOSITION.md` SHA-256 `b9325219ce1fefe7cf4b22cc6a931156d6a07103a0b02ece629b17f1a73c13b5`.
+
+R08 is a complete bag/hold increment in Phase 2; R09 is a separate landing-control increment in Phase 3, with rotation/ghost before timer/drop integration. Each is usable on its predecessor. Phase 1 text is retained byte for byte. Earlier behavior profiles remain scoped to their delivery boundary, while current production selects the documented enhancements. Current strategy is Ready; placement additions are pending.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| Phase 1 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 2 | 1 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 3 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
 
 
 Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
