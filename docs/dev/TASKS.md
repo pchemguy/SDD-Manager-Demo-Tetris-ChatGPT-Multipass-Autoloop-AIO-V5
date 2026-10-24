@@ -102,3 +102,34 @@ Execute only an authorized range after preparation integration and eligible-phas
         - [ ] T-025 — Review, test and report phase 4
             Depends on: completion/closure of delivery milestones 4.1, including their review tasks. Review cross-milestone code, run all phase exits/regressions, repair blockers and aggregate findings/TODOs. Commit the phase report and refresh HANDOFF; verify integration and the planned phase release. If this is the last phase in the complete owning list, also write the final implementation report and aggregate all unresolved TODOs with provenance/options.
             Report: `docs/dev/reports/phases/4/PHASE-REPORT.md`; final report when applicable: `docs/dev/reports/IMPLEMENTATION-REPORT.md`.
+
+## Phase 5 — Bonus-funded penetrator play
+
+- [ ] Phase 5 — Bonus-funded penetrator play
+    - [ ] Milestone 5.1 — Safe penetration mechanics
+        - [ ] T-026 — Implement penetrator transit and terminal projection
+            Scope: landing/collision-policy functions, board boundary and cavity fixtures. Depends on: T-025 and Phase 4 integration/closure.
+            Evidence: Deepest legal cavity, crossed-cell preservation, in-bounds transit and no-terminal rejection pass with ordinary regression fixtures. Maintain affected module/user documentation with the result.
+        - [ ] T-027 — Integrate activation hold rejection and terminal grounding
+            Scope: active-mode reducer, B/C input guards and controller grounding transitions. Depends on: T-026.
+            Evidence: Single activation, no-spend rejections, inert hold, timer preservation/cancellation and final nonoverlapping insertion pass. Maintain affected module/user documentation with the result.
+        - [ ] T-028 — Review, test and report milestone 5.1
+            Depends on: T-026, T-027. Review the milestone implementation and collaborating modules, run its PLAN exit checks and regressions, repair blockers, and commit the report with findings and TODOs (None when empty).
+            Report: `docs/dev/reports/phases/5/5.1.md`.
+    - [ ] Milestone 5.2 — Bonus and visible penetrator experience
+        - [ ] T-029 — Implement capped bonus earning and restart lifecycle
+            Scope: lock/clear/award reducer transaction and bank fixtures. Depends on: T-028.
+            Evidence: Exactly-four award once, 0–3 cap, spent/restored bank and restart reset pass without score duplication. Maintain affected module/user documentation with the result.
+        - [ ] T-030 — Render white cells and the bonus indicator
+            Scope: cell appearance metadata, view/snapshot and accessible count label. Depends on: T-029.
+            Evidence: Active/settled/ghost penetrator cells are white, regular pieces nonwhite, and symbols/count update on earn/spend. Maintain affected module/user documentation with the result.
+        - [ ] T-031 — Verify penetrator play across landing controls
+            Scope: both-browser barrier/cavity scenarios, screenshot evidence and README controls. Depends on: T-030.
+            Evidence: Ghost/drop parity, dynamic visibility, active hold rejection, lock delay and ordinary game regressions pass on served build. Maintain affected module/user documentation with the result.
+        - [ ] T-032 — Review, test and report milestone 5.2
+            Depends on: T-029, T-030, T-031. Review the milestone implementation and collaborating modules, run its PLAN exit checks and regressions, repair blockers, and commit the report with findings and TODOs (None when empty).
+            Report: `docs/dev/reports/phases/5/5.2.md`.
+    - [ ] Milestone 5.3 — Phase review
+        - [ ] T-033 — Review, test and report phase 5
+            Depends on: completion/closure of delivery milestones 5.1, 5.2, including their review tasks. Review cross-milestone code, run all phase exits/regressions, repair blockers and aggregate findings/TODOs. Commit the phase report and refresh HANDOFF; verify integration and the planned phase release. If this is the last phase in the complete owning list, also write the final implementation report and aggregate all unresolved TODOs with provenance/options.
+            Report: `docs/dev/reports/phases/5/PHASE-REPORT.md`; final report when applicable: `docs/dev/reports/IMPLEMENTATION-REPORT.md`.

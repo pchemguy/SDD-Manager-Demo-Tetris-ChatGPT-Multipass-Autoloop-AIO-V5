@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for the selected documentation boundary; implementation not authorized. Reviewed `TASKS.md` SHA-256 `00674a219b20bc5bc5d7bb0fcc62a789801a1dbadaf31a5b92a4741220100440`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for the selected documentation boundary; implementation not authorized. Reviewed `TASKS.md` SHA-256 `b643065085d8dec4751fdd51a9c97d4ffd910ab178d1a99941bb2bf582d567f1`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -49,6 +49,26 @@ T-022 owns the pure predicate; T-023 owns view integration, browser evidence and
 | 3.1 | 2 | T-016 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
 | 3.2 | 3 | T-020 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
 | 4.1 | 2 | T-024 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 3
+
+Review by the owning sdd-tasks role on 2026-10-24. Governing identities: `PLAN.md` SHA-256 `4f8df78d25a1fbd9ff9a738326da441f2e93db27305dc53988c657e646acc589`; `PLAN-REVIEW-REPORT.md` SHA-256 `5d819aa7c9ab18481feabc57886dc63e8c2efd737ff6a4802d939084074d58f6`; `layout.md` SHA-256 `869f9d0b80768a4c3d86943920cfa2643193d1e86a199cd43855f07d657d04ee`; `SPEC.md` SHA-256 `76193c81710c1a2d025ffba77dca02a315e1b91aaa0b00ab62e2ac27376fcd56`; `DECOMPOSITION.md` SHA-256 `ae43a24f04309742c3aa48babae56f8af3ae483459352a4583eba6418793a501`.
+
+T-026/T-027 form the narrow policy/controller integration group and T-029–T-031 cover bank, appearance and served cross-feature acceptance. Every task has a bounded module/collaboration scope, predecessor IDs and rejection/verification evidence. T-028/T-032 end their delivery milestones; T-033 alone reviews phase milestone 5.3 after delivery closure. All 33 task IDs are unique/unchecked; R11 and every Phase 5 exit are mapped. Strict earlier prefix is unchanged.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| 1.1 | 3 | T-004 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 1.2 | 3 | T-008 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 2.1 | 2 | T-012 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 3.1 | 2 | T-016 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 3.2 | 3 | T-020 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
+| 4.1 | 2 | T-024 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 5.1 | 2 | T-028 | Narrow cohesive capability; two tasks separate rule/adapter or persistence/error responsibilities. Extra splits would add handoff overhead without an independent outcome. |
+| 5.2 | 3 | T-032 | Bounded rule/application/delivery responsibilities; task scopes and prerequisites inspected, not accepted by count alone. |
 
 
 Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
