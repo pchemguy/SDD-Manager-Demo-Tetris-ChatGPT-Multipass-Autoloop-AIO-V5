@@ -43,3 +43,7 @@ Follow `sdd-manage`'s preparation and phase-activation workflows for required tr
 ## Project guidance
 
 Maintain project-specific navigation and validated setup/check commands here as they become established. Do not invent commands, paths, requirements or completion claims.
+
+## Project navigation
+
+Use [PROJECT](docs/dev/PROJECT.md), [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DECOMPOSITION](docs/dev/DECOMPOSITION.md), [SPEC](docs/dev/SPEC.md), [PLAN](docs/dev/PLAN.md) and [layout](docs/dev/layout.md) for the current intended product. Preparation progress and decisions belong to DOCS_TASKS and DOCS_PREPARATION, linked by HANDOFF. Implementation paths are planned; executable setup/check scripts are not established yet.
