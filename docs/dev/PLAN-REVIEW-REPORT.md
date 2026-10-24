@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for TASKS. Reviewed `PLAN.md` SHA-256 `78e1a717ca9f9974ee9d0135c0218d258ad275595f158228abc52f071a91772a`; `layout.md` SHA-256 `953d8c6d3856ce40ce98253e500b44e64ff0995f42bfeb604ad0bb9605bb5117`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for layout; TASKS held pending combined layout review. Reviewed `PLAN.md` SHA-256 `4f8df78d25a1fbd9ff9a738326da441f2e93db27305dc53988c657e646acc589`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -88,6 +88,23 @@ Combined review places the visibility predicate, fixtures and browser rendering 
 | Phase 2 | 1 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
 | Phase 3 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
 | Phase 4 | 1 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 6
+
+Review by the owning sdd-plan role on 2026-10-24. Governing identities: `SPEC.md` SHA-256 `76193c81710c1a2d025ffba77dca02a315e1b91aaa0b00ab62e2ac27376fcd56`; `SPEC-REVIEW-REPORT.md` SHA-256 `8fc9ce3394d64866db2df600f8c24c799eb08d243b635a76f7395eb95eab86fd`; `ARCHITECTURE.md` SHA-256 `b71727b9b5fea57214a0fd7da9baaa4812b122f560dddcdc02a82b037e823407`; `DECOMPOSITION.md` SHA-256 `ae43a24f04309742c3aa48babae56f8af3ae483459352a4583eba6418793a501`.
+
+Phase 5 keeps the penetrator capability coherent: safe terminal/activation mechanics first, then earned/spent bank and full visible experience. No separate settings/persistence scope is included. Both milestones demonstrate real functionality with failure/regression exits; two delivery milestones are justified without padding. Prior PLAN prefix is unchanged. Current strategy Ready; placement review pending.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| Phase 1 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 2 | 1 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 3 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 4 | 1 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
+| Phase 5 | 2 | One final phase-review milestone | Narrow user-visible increment; retained without padding. Each milestone has an integrated demonstration, not just infrastructure. |
 
 
 Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.

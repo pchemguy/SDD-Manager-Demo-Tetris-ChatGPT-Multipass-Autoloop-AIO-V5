@@ -93,3 +93,27 @@ Exit: R10 minimum-row 9/10 and straddling cases pass; demonstrate visual clarity
 ### Milestone 4.2 — Phase review
 
 After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify midline/straddling hide-restore and unchanged hard-drop/timing behavior in rules and both-browser rendering Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
+
+## Phase 5 — Bonus-funded penetrator play
+
+Outcome: Spend a four-line-clear bonus to guide a white piece through occupied cells into a legal landing.
+
+Scope and boundary: R11 traversal/activation, bank and display with R09-R10 landing/timing/visibility interactions. No game settings or persistence.
+
+Prerequisite: Phase 4 completed, reviewed, integrated and published. Target version: v0.5.0.
+
+### Milestone 5.1 — Safe penetration mechanics
+
+Demonstrate an activated piece crossing a barrier and locking into a legal cavity.
+
+Exit: R11 terminal/movement/rotation/activation/hold invariants pass; demonstrate cavity reachability for continue/amend/simplify/stop feedback A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 5.2 — Bonus and visible penetrator experience
+
+Demonstrate earned/spent bonuses and white penetrator play with matching ghost/drop.
+
+Exit: R11 cap/award/appearance/indicator and R09-R10 integration cases pass in both browsers A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 5.3 — Phase review
+
+After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify legal terminal insertion without destroyed cells, atomic 0–3 bonus lifecycle, disabled active hold, shared ghost/drop geometry and both-browser appearance/timing evidence Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
