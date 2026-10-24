@@ -77,3 +77,4 @@ Record first PROJECT approval atomically with DOCS-002 completion, publish/read 
 ## Pass 1 document evidence
 
 - DOCS-002: `PROJECT.md` SHA-256 `2f71599a56c88431b4927d7ee6d6fbc8d1cf243324ae38e60feb6b02cfaf5f53`. Human approved the published PROJECT and presented cross-scope choices on 2026-10-24. Exact approved PROJECT bytes retained. Future checkpoints use autodoc/autoloop preapproval; no product implementation is authorized. Completion commit requires push/readback, then issue 2 closure/readback before progression.
+- DOCS-003: `ARCHITECTURE.md` SHA-256 `4219974a10108cf2878a1c8b19709cc96619e3aa46cfbe06e884c33f739d8ee2`. Autodoc preapproval following initial human acceptance. Design review checked one state owner, inward dependencies, injected time/randomness, focus/restart cleanup, current-only scope and browser-policy boundary; no unresolved structural blocker. Completion commit requires push/readback, then issue 3 closure/readback before progression.
