@@ -4,7 +4,7 @@
 
 - Mode and source: autodoc/autoloop, explicitly requested by the user on 2026-10-24 for this repository and the six scopes below.
 - Multipass delivery: strict; no flexible integration permission was given. Later scopes append bounded phases/tasks and preserve earlier IDs, names, scope, milestone membership, order, dependencies and exits.
-- Current pass: 3, cumulative scope 3; DOCS-006 completion recorded below. After its verified publication/issue closure, continue to DOCS-007.
+- Current pass: 3, cumulative scope 3; DOCS-007 completion recorded below. After its verified publication/issue closure, continue to DOCS-008.
 - Approval basis: the user approved the first PROJECT and presented cross-scope decisions on 2026-10-24. Later PROJECT approvals are waived, announced in chat before that first checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. This approval authorizes the predefined sequence/resets. The presented product choices are accepted within their stated applicability.
 - Delegation after first approval: resolve later material decisions within the predefined scope, record the rationale and explain consequential choices in chat without adding approval pauses.
 - Stop: after Pass 6 DOCS-008 publication and issue closure, before DOCS-009, whole-package QC, documentation integration or implementation. Implementation will require subsequent authorization; releases apply only after verified integrated implementation phases.
@@ -72,7 +72,7 @@ Material unresolved decisions: none at the initial approved scope. TypeScript/Ca
 
 ## Pending transitions
 
-Publish/read back the current DOCS-006 completion and close/read back issue 6; then continue to DOCS-007. Git/provider observations settle these effects; earlier pass evidence is historical. Milestone 1 and DOCS-009 remain open.
+Publish/read back the current DOCS-007 completion and close/read back issue 7; then continue to DOCS-008. Git/provider observations settle these effects; earlier pass evidence is historical. Milestone 1 and DOCS-009 remain open.
 
 ## Pass 1 document evidence
 
@@ -125,3 +125,4 @@ Carry forward the initial accepted midline decision: dynamic ghost visible only 
 - DOCS-004: `DECOMPOSITION.md` SHA-256 `1d7a32bd1cf6c96d07764e6d61392e402f78a507dba8776314b50019a333548b`. Autodoc preapproval. Reviewed predicate inputs/output and view consumer, exact occupied-cell basis and unchanged projector/state responsibilities. Completion commit requires push/readback, then issue 4 closure/readback before progression.
 - DOCS-005: `SPEC.md` SHA-256 `ec7b4c0d7d96172e1a54dd45675fc76ef9fd701ef96d0ef71bc00bc8cce52c9d`. Autodoc preapproval. SPEC/design QC Ready for R01-R10; threshold/straddling, redraw and hard-drop independence are precise and trace to the predicate/view seam. Completion commit requires push/readback, then issue 5 closure/readback before progression.
 - DOCS-006: `PLAN.md` SHA-256 `78e1a717ca9f9974ee9d0135c0218d258ad275595f158228abc52f071a91772a`. Autodoc preapproval. Strategy QC Ready for Phase 4; one delivery milestone is explicitly justified as a narrow outcome. Exact prior PLAN prefix preserved. Completion commit requires push/readback, then issue 6 closure/readback before progression.
+- DOCS-007: `layout.md` SHA-256 `953d8c6d3856ce40ce98253e500b44e64ff0995f42bfeb604ad0bb9605bb5117`. Autodoc preapproval. Combined PLAN/layout QC Ready; predicate, fixture and browser owners cover the narrow visibility phase without duplicating landing logic. Completion commit requires push/readback, then issue 7 closure/readback before progression.

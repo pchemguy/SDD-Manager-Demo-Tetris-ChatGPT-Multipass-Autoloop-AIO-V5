@@ -30,3 +30,7 @@ The intended toolchain is TypeScript/Vite with unit checks and Playwright. T-001
 ## Supply and landing ownership
 
 `src/core/source.ts` owns bag/uniform strategies; `src/core/game.ts` owns hold state and actions. `src/core/rotation.ts` owns kick resolution, `src/core/landing.ts` owns projection, and `src/app/session.ts` owns grounding deadlines. Unit fixtures remain under core/app test homes; browser cases and held/ghost presentation remain under the existing browser adapters. These modules separate independent change/test responsibilities without duplicating board geometry or state.
+
+## Ghost visibility ownership
+
+`src/core/ghost.ts` owns the pure occupied-cell visibility predicate and `tests/unit/core/ghost.test.ts` owns threshold fixtures. The existing landing projector supplies cells; browser snapshot/view paths consume the boolean. `tests/browser/ghost.spec.ts` owns dynamic hide/restore and drop-independence interaction/rendering checks. No configuration or storage path is introduced.
