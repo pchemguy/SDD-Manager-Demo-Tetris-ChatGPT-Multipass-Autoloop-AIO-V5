@@ -4,7 +4,7 @@
 
 - Mode and source: autodoc/autoloop, explicitly requested by the user on 2026-10-24 for this repository and the six scopes below.
 - Multipass delivery: strict; no flexible integration permission was given. Later scopes append bounded phases/tasks and preserve earlier IDs, names, scope, milestone membership, order, dependencies and exits.
-- Current pass: 1, playable classic baseline. DOCS_TASKS owns task completion; DOCS-002 proposal d77a0b0e5ce81d6d16221d1e26c85251298991f6 was published/read back and approved by the user on 2026-10-24; completion and issue closure follow this checkpoint.
+- Current pass: 2, predefined cumulative scope 2 from the retained sequence. Cursor DOCS-002 after verified reopening; earlier document acceptance is historical.
 - Approval basis: the user approved the first PROJECT and presented cross-scope decisions on 2026-10-24. Later PROJECT approvals are waived, announced in chat before that first checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. This approval authorizes the predefined sequence/resets. The presented product choices are accepted within their stated applicability.
 - Delegation after first approval: resolve later material decisions within the predefined scope, record the rationale and explain consequential choices in chat without adding approval pauses.
 - Stop: after Pass 6 DOCS-008 publication and issue closure, before DOCS-009, whole-package QC, documentation integration or implementation. Implementation will require subsequent authorization; releases apply only after verified integrated implementation phases.
@@ -87,3 +87,7 @@ Record first PROJECT approval atomically with DOCS-002 completion, publish/read 
 
 Phase 1, milestones 1.1–1.3, T-001–T-009. Protected PLAN block SHA-256 `a856ce52c8f032af791638a949f308a7697e374ccd0cd9b6e4c708021dcfcea3`; TASKS block SHA-256 `df447fe9f00fdc3855f09e7252959e42f9c4f4467648c1082090497d94fb2599`. Compare exact retained blocks before later planning/task publication.
 - DOCS-008: `TASKS.md` SHA-256 `18aed12b67ce8dce9a7f9d4736527a7dfd7ecc9413798b4403e471744ef0f6f2`; `HANDOFF.md` SHA-256 `bea087f625c93644c30ac99f0b2369e1628e56104f8fa0f5e4b46f186fa72172`. Autodoc preapproval. TASKS conformance is Ready: nine unique unchecked tasks, six delivery tasks and three dedicated review tasks, complete R01-R07/PLAN coverage, feasible dependencies and justified counts. Phase 1/T-001-T-009 becomes protected; after closure reset for predefined Pass 2, without DOCS-009. Completion commit requires push/readback, then issue 8 closure/readback before progression.
+
+## Reset into Pass 2
+
+Prior Pass 1 DOCS-008 checkpoint `b8ad868711a4dd4ef4f95b95c8333fef57e107c9` was published/read back and issue 8 closed. Initial PROJECT approval and autodoc/autoloop authorize this next predefined scope and reset. All existing product documents and protected phase/task blocks are retained. DOCS-001 remains complete; DOCS-002–009 are unchecked. Publish this reset, reopen/read back the same issues 2–9, and verify milestone 1 open before document revision. No package QC, integration or implementation is selected.
