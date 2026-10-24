@@ -41,4 +41,8 @@ The intended toolchain is TypeScript/Vite with unit checks and Playwright. T-001
 
 ## Configuration ownership
 
-`src/app/settings.ts` owns schema/defaults and the page model; `src/browser/settings.ts` owns labeled native controls. Existing session/game/drop/ghost paths consume the validated values and effective per-piece policies. Source peek remains in `src/core/source.ts`, with preview drawing in the existing view. Unit tests live under `tests/unit/app/` and source tests under core; `tests/browser/settings.spec.ts` owns control, focus, matrix and reload/restart scenarios. No storage or URL adapter exists in the session-only path.
+`src/app/settings.ts` owns schema/defaults and the page model; `src/browser/settings.ts` owns labeled native controls. Existing session/game/drop/ghost paths consume the validated values and effective per-piece policies. Source peek remains in `src/core/source.ts`, with preview drawing in the existing view. Unit tests live under `tests/unit/app/` and source tests under core; `tests/browser/settings.spec.ts` owns control, focus, matrix and reload/restart scenarios. The settings model/form do not directly access persistence; dedicated browser adapters own those effects.
+
+## Persistence ownership
+
+`src/app/settings-codec.ts` owns canonical field codecs and pure resolution; `src/browser/cookies.ts` and `src/browser/url-settings.ts` own browser effects. Bootstrap/change orchestration stays in `src/browser/main.ts` and the existing settings adapter. Resolver tables live under `tests/unit/app/`, adapter failure checks under `tests/unit/browser/`, and actual cookie/URL/reload scenarios under `tests/browser/settings-persistence.spec.ts`. No storage string format leaks into core gameplay. Existing policies/packages/logs remain outside product ownership.
