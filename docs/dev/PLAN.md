@@ -141,3 +141,27 @@ Exit: R12 non-consuming preview, focus/restart/reload and cross-feature matrix p
 ### Milestone 6.3 — Phase review
 
 After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify all setting values/defaults, locking matrix, live changes, held/preview sequence invariants, native focus and session reload/restart in both browsers Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
+
+## Phase 7 — Persistent shareable configuration
+
+Outcome: Restore and share every setting through cookies and URL values without disrupting play.
+
+Scope and boundary: R13 per-field codec, source resolution, explicit-URL saving and user-change cookie/URL writes. Preserve R12 controls/live semantics and all gameplay; no new storage backend.
+
+Prerequisite: Phase 6 completed, reviewed, integrated and published. Target version: v0.7.0.
+
+### Milestone 7.1 — Restored configuration
+
+Open mixed URL/cookie settings with the correct first-piece policies.
+
+Exit: R13 codec, duplicate/invalid fallback and explicit-value cookie writes pass; demonstrate mixed-source loading for continue/amend/simplify/stop feedback A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 7.2 — Saved and shareable changes
+
+Change controls, retain selected settings across reload and share their URL.
+
+Exit: R13 one-field saves, unrelated URL preservation, native-control reload and error paths pass in both browsers with gameplay regressions A final milestone code review, focused regression checks, blocker repairs and a committed milestone report are required.
+
+### Milestone 7.3 — Phase review
+
+After every delivery milestone is complete and closed, review cross-milestone code, run phase acceptance and regressions, resolve blockers and commit the phase report. Verify six-field precedence and explicit-default/omission cases, actual cookie/URL reload evidence, failure resilience, full game regressions and final TODO aggregation Complete the explicit default-branch integration and merged-state checks before phase completion/release. If this completes the full intended task list, aggregate the final implementation report and outstanding TODOs.
