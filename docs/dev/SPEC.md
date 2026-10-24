@@ -107,7 +107,7 @@ Render every active penetrator cell white. Its ghost uses white with the ghost o
 
 Acceptance: a barrier fixture proves ordinary descent stops above it but penetrator ghost/drop find the deepest legal cavity below it. Exercise overlap transit, no-terminal rejection, boundary kicks, final legal insertion and preservation of crossed cells. At zero bank B is inert; at three a four-line clear stays at three; successful B spends once; repeat B and C are inert while active. A four-line clear by a penetrator can restore one spent bonus once. Verify activation mid-delay, unchanged-terminal deadline retention, deeper-travel cancellation, white rendering, 0–3 symbols and restart in both browsers.
 
-## R12 — Page-session settings and next preview
+## R12 — Settings model and next preview
 
 The side panel provides these labeled native controls. Reject invalid values independently without changing the prior valid model value. Programmatic invalid updates also return unchanged settings; no control event may produce a partially invalid model.
 
@@ -120,7 +120,7 @@ The side panel provides these labeled native controls. Reject invalid values ind
 | `lock` | `failed`, `interval` | `interval` |
 | `hold` | boolean | true |
 
-Settings live only in the mounted page's memory. Reload initializes all defaults; no cookies, local storage or URL parameters are read or written. Restart retains the selected settings while resetting board, score, source, held kind, hold allowance and bonus bank. Each page has its own settings model.
+The mounted page owns the validated desired settings model. Page initialization and reload resolve its values under R13; game logic and controls do not directly access persistence. Restart retains the selected settings while resetting board, score, source, held kind, hold allowance and bonus bank. Each page has its own settings model.
 
 Ghost mode `hide` suppresses it; `dynamic` applies R10; `show` permits it anywhere. All modes retain R09 active/playing/noncoincident suppression and the same normal/penetrator target. Ghost/preview visibility changes apply immediately. Preview shows exactly the next unconsumed kind; showing/hiding it cannot consume a draw, shuffle again or change the subsequent sequence. Empty hold consumes that same next kind; occupied hold swap leaves the preview unchanged.
 
@@ -130,4 +130,28 @@ Latch `lock` and `hardLock` from desired settings whenever a kind becomes the ac
 
 Controls remain usable while playing, suspended or game over, and show desired selections. Focused inputs/selects/buttons keep native navigation; game shortcuts are handled only by the game surface. A focus change follows the existing suspension rules rather than leaving stuck input.
 
-Acceptance: exercise each default and allowed value, invalid updates, all four general/hard-lock combinations, mid-piece policy edits and incoming-piece latching. Toggle visibility/availability during ordinary/penetrator play without changing board, sequence or existing deadline. Verify retained held kind/allowance and preview draw counts. In both browsers change controls through native input, restart with selections retained, reload with defaults restored, and inspect the next preview and focus behavior. Confirm no settings persistence reads/writes occur.
+Acceptance: exercise each default and allowed value, invalid updates, all four general/hard-lock combinations, mid-piece policy edits and incoming-piece latching. Toggle visibility/availability during ordinary/penetrator play without changing board, sequence or existing deadline. Verify retained held kind/allowance and preview draw counts. In both browsers change controls through native input, restart with selections retained, reload with R13 source resolution, and inspect the next preview and focus behavior. Confirm persistence is confined to the R13 adapters and does not change current-piece latching.
+
+## R13 — Cookie and URL configuration persistence
+
+All R12 fields participate independently. Query names are `ghost`, `hardDrop`, `nextPreview`, `hardLock`, `lock` and `hold`; cookie names are the corresponding query name prefixed with `tetris_`. Enum values are the exact case-sensitive R12 tokens. Booleans serialize as `1` or `0`; other spellings, empty strings and values outside the field's allowed set are invalid. Decode query/cookie values safely; malformed encodings must not crash initialization. Repeated occurrences of a known query name, even identical, are invalid for that field. Duplicate matching cookie names are invalid for that cookie field. Ignore unknown fields.
+
+For each field choose: a valid explicitly supplied URL value; otherwise a valid saved cookie; otherwise its R12 default. Invalid URL input falls through without destroying a valid cookie. An invalid cookie falls through to default without affecting other fields. Resolve the complete model before first spawn so the first piece receives its chosen policies. Rendering/restart does not repeat source restoration or overwrite current selections.
+
+For every valid explicit URL value, write that same value to its corresponding cookie during initialization, including when equal to the default. An omitted or invalid URL field generates no cookie write: retain its saved cookie rather than saving a default over it. Do not add omitted setting parameters to the URL merely because a cookie/default supplied the value.
+
+Whenever a valid control change is accepted, update the live desired model, save that field's canonical cookie and set its canonical query parameter using replaceState without navigation or an added history entry. Consolidate duplicate occurrences of that changed field to one canonical value. Preserve other setting parameters, unrelated query values and the fragment. Attempt cookie and URL writes independently; failure of one does not suppress the other or roll back the model. Preserve the R12 immediate-availability and next-piece lock-policy rules; the URL represents desired settings, not an older active piece's latched policies.
+
+Cookie writes use Path=/, Max-Age=31536000 and SameSite=Lax, with Secure on HTTPS. Values are individually encoded; no combined configuration blob is required. Cookie unavailability, expiry, malformed data or denied writes must not prevent play. If persistence fails, retain the live selection and provide a nondisruptive indication that settings/link updates could not be saved as applicable. Do not silently use local/session storage or any server. Opening an explicit valid URL still applies its settings when cookie writes fail.
+
+Acceptance cases include:
+
+- URL `ghost=dynamic` over cookie `hide` applies/saves `dynamic`, although it is the default.
+- Omitted `ghost` with cookie `hide` applies `hide`, leaves the cookie unchanged and does not inject a URL default.
+- Invalid/empty/duplicate URL `hardDrop` with valid cookie `0` selects false and does not overwrite that cookie.
+- A mixed URL/cookie set resolves each of all six fields independently, including valid false values; invalid cookie plus omitted URL uses only that field's default.
+- Changing one field updates only its cookie/query entry, retains unrelated values/hash and current game state, and survives reload/reopening through a fresh page/context with retained cookies.
+- First-spawn effective policies reflect restored values; later edits retain current-piece latches. Restart retains current desired settings without another restore.
+- Blocked cookies and simulated history failures preserve play, attempt the other write, and do not cause navigation, duplicated mounting or an uncaught exception.
+
+Exercise pure resolver/codec tables plus actual cookies, native control changes, URL changes and reload in Chromium and Playwright-managed Firefox. A default-only or in-memory check cannot establish persistence acceptance.

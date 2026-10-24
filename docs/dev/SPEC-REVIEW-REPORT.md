@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for PLAN. Reviewed `SPEC.md` SHA-256 `69a868eaa0bbbff94687f4a98a31c2185c0bf502fd8a8adc7e138cb5c84c4041`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for PLAN. Reviewed `SPEC.md` SHA-256 `ffe5cab5352735ff2b08eeb38adcbc10baf31860343d3acd92ca0d6104af5371`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -52,6 +52,16 @@ Checks: read changed roots against governing sources; inspect scope, ownership, 
 Review by the owning sdd-specify role on 2026-10-24. Governing identities: `PROJECT.md` SHA-256 `4272eeae042917e53befac5569efd0823670c7197293240a1e6f73826d959875`; `ARCHITECTURE.md` SHA-256 `95b7ec3f4999a34258aec389035e4f788459cbe0fa9189f0274d69f31171039e`; `DECOMPOSITION.md` SHA-256 `ad371e4cd67b1e6e790339673f8fdbed85bd0422f2de1e4a33647645ac6b14f4`.
 
 R12 defines every allowed value/default, invalid-update rejection, page/restart lifetime, desired/effective policy boundary and preview sequence behavior. It references existing failed/interval and penetrator terminal contracts, including general-hard-drop failed-down semantics, immediate zero-distance locking and disable precedence. R10 is explicitly the dynamic mode; R09 remains the shared target owner. Matrix/native-focus acceptance is complete. No persistence scope or unresolved conflict.
+
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 5
+
+Review by the owning sdd-specify role on 2026-10-24. Governing identities: `PROJECT.md` SHA-256 `34b51dbd8cba3784627f59fe710fe07f69c63c0dcf341c345ff5f41ce8a842ca`; `ARCHITECTURE.md` SHA-256 `63c5e7701e12882dc506ec08318c6ff092508b5f7c8ebd3f583001417987ab1a`; `DECOMPOSITION.md` SHA-256 `9dce9b5c9e7968ec6d52fa9544610b4f242974daca62e3ea6d9592cef702c3d4`.
+
+R13 covers all six R12 fields and exact canonical tokens, independent precedence, malformed/duplicate input, explicit defaults, omitted-cookie retention, one-field writes and URL preservation. Resolver, adapters and coordinator each have one owner; restoration occurs before first policy latch and failures preserve usable play. R12 lifetime/acceptance is aligned to the durable end state rather than retaining a contradictory reload-default statement. R01–R11 and current gameplay interactions remain covered. No confirmed unresolved issue.
 
 
 
