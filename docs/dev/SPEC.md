@@ -67,7 +67,7 @@ Check selection may combine scenarios where one observation establishes several 
 
 ## R08 — Seven-bag supply and hold
 
-Production draws from a uniformly shuffled permutation containing each kind once, then a fresh bag. Use injected random draws for deterministic checks; a Fisher–Yates permutation with j = floor(u * (i + 1)) is acceptable. The classic uniform source remains a core strategy without a UI selector. Restart clears bag/cursor and hold, starts a fresh bag and resets the hold allowance.
+Production draws from a uniformly shuffled permutation containing each kind once, then a fresh bag. Use injected random draws for deterministic checks; a Fisher–Yates permutation with j = floor(u * (i + 1)) is acceptable. The classic uniform source remains a core strategy without a UI selector. The source queue exposes the next unconsumed kind without consuming or reordering it for R12 preview. Restart clears bag/cursor and hold, starts a fresh bag and resets the hold allowance.
 
 C holds an ordinary active kind at most once between locks; R11 prohibits hold while penetration is active. Empty hold stores it and consumes one next source kind; occupied hold swaps kinds without consuming a draw. Incoming pieces use the R01 spawn pose, orientation 0 and fresh gravity/grounding timing. The used flag stays set until lock, including after an empty-slot hold. Denied repeated hold is a complete no-op. A blocked incoming spawn ends the game without score or settled-board changes; the accepted hold-slot update remains. Show the stored kind, or an empty hold indicator, in HTML/Canvas side presentation.
 
@@ -79,15 +79,15 @@ For an ordinary non-O rotation, test offsets (0,0), (-1,0), (1,0), (-2,0), (2,0)
 
 Ordinary landing is the deepest pose reachable through successive legal downward steps from the current pose, stopping before the first blocked step. Draw its occupied cells as a visually distinct translucent/outlined ghost subject to R10, without modifying the board. Suppress the ghost when it coincides with the active pose, in game over or without an active piece. Space moves the active piece to that exact target; it does not award drop points or consume a source item until lock.
 
-Production lock delay is 1000 ms of active time from first becoming grounded. Grounded means the next ordinary downward step would fail. Establish grounding immediately after spawn, movement, rotation or drop, not at the next gravity tick. At deadline lock once even without a failed-down action. A failed downward attempt before deadline is a no-op. Successful movement/rotation while still grounded and repeated/zero-distance hard drops retain the original deadline. Leaving support cancels it; landing again starts a fresh interval. Due locks are processed before an action stamped at the same active timestamp. Suspension preserves elapsed active time; restart and incoming-piece changes clear the outgoing deadline.
+The default full-interval locking policy delays 1000 ms of active time from first becoming grounded; R12 selects the effective policy. Grounded means the next ordinary downward step would fail. Establish grounding immediately after spawn, movement, rotation or drop, not at the next gravity tick. At deadline lock once even without a failed-down action. A failed downward attempt before deadline is a no-op. Successful movement/rotation while still grounded and repeated/zero-distance hard drops retain the original deadline. Leaving support cancels it; landing again starts a fresh interval. Due locks are processed before an action stamped at the same active timestamp. Suspension preserves elapsed active time; restart and incoming-piece changes clear the outgoing deadline.
 
-The classic failed-down strategy remains a core policy for its scoped behavior; it is not exposed by a setting here. Ghost and hard drop have no independent collision rules.
+The failed-down strategy in R04 is also available through R12; its blocked-down attempt locks immediately at a valid terminal pose. Ghost and hard drop have no independent collision rules.
 
 Acceptance: wall/floor fixtures prove candidate order and rejection; ghost equals hard-drop target; a grounded piece survives 999 ms and locks at 1000 ms. Grounded shifts/drop cannot extend the deadline; leaving support and regrounding can start a new one. Hard drop midway through a gravity cycle still gets a full grounded interval. Verify real input, ghost rendering, hold and hard-drop-to-lock in both browsers.
 
 ## R10 — Dynamic ghost visibility
 
-For the 20-row board, the lower half is rows 10–19 inclusive. Show the ghost only when every projected occupied cell has y >= 10, in addition to the existing active/playing/noncoincident conditions. Equivalently, its minimum occupied row is at least 10. Any projected cell at row 9 or above hides the entire ghost; do not clip it or use its center, square origin or active-piece height.
+For the 20-row board, the lower half is rows 10–19 inclusive. In dynamic visibility mode, show the ghost only when every projected occupied cell has y >= 10, in addition to the existing active/playing/noncoincident conditions. Equivalently, its minimum occupied row is at least 10. Any projected cell at row 9 or above hides the entire ghost; do not clip it or use its center, square origin or active-piece height.
 
 Recompute visibility from the current landing result after each relevant state change. Movement or rotation can hide or restore it immediately. Visibility never changes the landing result, hard-drop destination, board, draw order, hold allowance or deadline.
 
@@ -106,3 +106,28 @@ Gravity/soft down advances one row toward that terminal, including through overl
 Render every active penetrator cell white. Its ghost uses white with the ghost outline/transparency treatment. On lock retain white appearance on its settled cells, which have ordinary fixed-cell collision behavior. Ordinary active/settled/held pieces never use white. The side panel shows exactly one lightning-bolt symbol per bonus, including zero symbols at zero; earning or spending updates the snapshot immediately. A numeric accessible label states the count.
 
 Acceptance: a barrier fixture proves ordinary descent stops above it but penetrator ghost/drop find the deepest legal cavity below it. Exercise overlap transit, no-terminal rejection, boundary kicks, final legal insertion and preservation of crossed cells. At zero bank B is inert; at three a four-line clear stays at three; successful B spends once; repeat B and C are inert while active. A four-line clear by a penetrator can restore one spent bonus once. Verify activation mid-delay, unchanged-terminal deadline retention, deeper-travel cancellation, white rendering, 0–3 symbols and restart in both browsers.
+
+## R12 — Page-session settings and next preview
+
+The side panel provides these labeled native controls. Reject invalid values independently without changing the prior valid model value. Programmatic invalid updates also return unchanged settings; no control event may produce a partially invalid model.
+
+| Field | Allowed values | Default |
+| --- | --- | --- |
+| `ghost` | `hide`, `dynamic`, `show` | `dynamic` |
+| `hardDrop` | boolean | true |
+| `nextPreview` | boolean | true |
+| `hardLock` | `general`, `immediate` | `general` |
+| `lock` | `failed`, `interval` | `interval` |
+| `hold` | boolean | true |
+
+Settings live only in the mounted page's memory. Reload initializes all defaults; no cookies, local storage or URL parameters are read or written. Restart retains the selected settings while resetting board, score, source, held kind, hold allowance and bonus bank. Each page has its own settings model.
+
+Ghost mode `hide` suppresses it; `dynamic` applies R10; `show` permits it anywhere. All modes retain R09 active/playing/noncoincident suppression and the same normal/penetrator target. Ghost/preview visibility changes apply immediately. Preview shows exactly the next unconsumed kind; showing/hiding it cannot consume a draw, shuffle again or change the subsequent sequence. Empty hold consumes that same next kind; occupied hold swap leaves the preview unchanged.
+
+`hardDrop=false` makes Space a complete no-op, with no target, timer or source change. `hold=false` makes C a complete no-op and retains the stored held kind/used allowance. Re-enabling hold restores availability only if the current cycle still permits it; active penetrator hold remains forbidden regardless of the setting. These availability choices apply immediately, without resetting an existing deadline.
+
+Latch `lock` and `hardLock` from desired settings whenever a kind becomes the active piece, including empty/swap hold. Edits do not change an existing piece's effective policies or deadline. `lock=failed` uses R04 failed-down locking at the selected normal/penetrator terminal. `lock=interval` uses the R09 grounding deadline. `hardLock=general` repositions to the shared target and follows that general policy: in failed mode hard drop itself is not a failed downward attempt, so a later blocked down/gravity attempt locks. `hardLock=immediate` locks a valid target atomically on the hard-drop action, including zero-distance drop, then clears/awards/spawns exactly once. Disabling hard drop takes precedence over either hard-drop policy.
+
+Controls remain usable while playing, suspended or game over, and show desired selections. Focused inputs/selects/buttons keep native navigation; game shortcuts are handled only by the game surface. A focus change follows the existing suspension rules rather than leaving stuck input.
+
+Acceptance: exercise each default and allowed value, invalid updates, all four general/hard-lock combinations, mid-piece policy edits and incoming-piece latching. Toggle visibility/availability during ordinary/penetrator play without changing board, sequence or existing deadline. Verify retained held kind/allowance and preview draw counts. In both browsers change controls through native input, restart with selections retained, reload with defaults restored, and inspect the next preview and focus behavior. Confirm no settings persistence reads/writes occur.

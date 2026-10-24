@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for PLAN. Reviewed `SPEC.md` SHA-256 `76193c81710c1a2d025ffba77dca02a315e1b91aaa0b00ab62e2ac27376fcd56`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for PLAN. Reviewed `SPEC.md` SHA-256 `69a868eaa0bbbff94687f4a98a31c2185c0bf502fd8a8adc7e138cb5c84c4041`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -42,6 +42,16 @@ Checks: read changed roots against governing sources; inspect scope, ownership, 
 Review by the owning sdd-specify role on 2026-10-24. Governing identities: `PROJECT.md` SHA-256 `27fe4f89bcfa7ab24ecd5493715714b59423c3468bf17d9cc8a674c5c2d57d29`; `ARCHITECTURE.md` SHA-256 `b71727b9b5fea57214a0fd7da9baaa4812b122f560dddcdc02a82b037e823407`; `DECOMPOSITION.md` SHA-256 `ae43a24f04309742c3aa48babae56f8af3ae483459352a4583eba6418793a501`.
 
 R11 maps the bank/activation/award to reducer transitions, terminal projection to one policy boundary, legal insertion to board and appearance/count to snapshots/views. It states every success/rejection/overlap/lock invariant and ordinary-versus-penetrator geometry. R09/R10 remain canonical timing/visibility owners; hold is rejected before mutation. Acceptance includes barriers, cavities, exact bank cap, repeated inputs, timing and visible output. No confirmed conflict remains.
+
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 4
+
+Review by the owning sdd-specify role on 2026-10-24. Governing identities: `PROJECT.md` SHA-256 `4272eeae042917e53befac5569efd0823670c7197293240a1e6f73826d959875`; `ARCHITECTURE.md` SHA-256 `95b7ec3f4999a34258aec389035e4f788459cbe0fa9189f0274d69f31171039e`; `DECOMPOSITION.md` SHA-256 `ad371e4cd67b1e6e790339673f8fdbed85bd0422f2de1e4a33647645ac6b14f4`.
+
+R12 defines every allowed value/default, invalid-update rejection, page/restart lifetime, desired/effective policy boundary and preview sequence behavior. It references existing failed/interval and penetrator terminal contracts, including general-hard-drop failed-down semantics, immediate zero-distance locking and disable precedence. R10 is explicitly the dynamic mode; R09 remains the shared target owner. Matrix/native-focus acceptance is complete. No persistence scope or unresolved conflict.
 
 
 
