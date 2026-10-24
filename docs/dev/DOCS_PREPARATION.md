@@ -4,7 +4,7 @@
 
 - Mode and source: autodoc/autoloop, explicitly requested by the user on 2026-10-24 for this repository and the six scopes below.
 - Multipass delivery: strict; no flexible integration permission was given. Later scopes append bounded phases/tasks and preserve earlier IDs, names, scope, milestone membership, order, dependencies and exits.
-- Current pass: 4, predefined cumulative scope 4 from the retained sequence. Cursor DOCS-002 after verified reopening; earlier document acceptance is historical.
+- Current pass: 4, cumulative scope 4; DOCS-002 completion recorded below. After its verified publication/issue closure, continue to DOCS-003.
 - Approval basis: the user approved the first PROJECT and presented cross-scope decisions on 2026-10-24. Later PROJECT approvals are waived, announced in chat before that first checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. This approval authorizes the predefined sequence/resets. The presented product choices are accepted within their stated applicability.
 - Delegation after first approval: resolve later material decisions within the predefined scope, record the rationale and explain consequential choices in chat without adding approval pauses.
 - Stop: after Pass 6 DOCS-008 publication and issue closure, before DOCS-009, whole-package QC, documentation integration or implementation. Implementation will require subsequent authorization; releases apply only after verified integrated implementation phases.
@@ -72,7 +72,7 @@ Material unresolved decisions: none at the initial approved scope. TypeScript/Ca
 
 ## Pending transitions
 
-Publish/read back this reset into Pass 4, reopen/read back issues 2–9 and verify milestone 1 open; then revise PROJECT. Preserve inherited decisions and strict prior delivery ranges.
+Publish/read back the current DOCS-002 completion and close/read back issue 2; then continue to DOCS-003. Git/provider observations settle these effects; earlier pass evidence is historical. Milestone 1 and DOCS-009 remain open.
 
 ## Pass 1 document evidence
 
@@ -135,3 +135,11 @@ Append Phase 4 / milestones 4.1–4.2 / T-022–T-025. Phases 1–3 and T-001–
 ## Reset into Pass 4
 
 Prior Pass 3 DOCS-008 checkpoint `a24851658a806afbb83915471f2489304b1fc7a8` was published/read back and issue 8 closed. Initial PROJECT approval and autodoc/autoloop authorize this next predefined scope and reset. All existing product documents and protected phase/task blocks are retained. DOCS-001 remains complete; DOCS-002–009 are unchecked. Publish this reset, reopen/read back the same issues 2–9, and verify milestone 1 open before document revision. No package QC, integration or implementation is selected.
+
+## Pass 4 decisions
+
+Initial activation/hold/bonus/white-cell decisions remain accepted. Delegated precision: transit uses in-bounds poses ignoring occupancy but every accepted pose must have a legal terminal pose at or below it. Penetrator kicks use the established offset order with this transit/terminal predicate. Grounding is arrival at the deepest valid terminal, not contact with an occupied row. Activation retains an unchanged grounding deadline and cancels it only when deeper travel becomes available. White settled penetrator cells have ordinary fixed-cell collision. Append Phase 5 / T-026–T-033; preserve Phases 1–4. Reset and issue reopening verified.
+
+## Pass 4 document evidence
+
+- DOCS-002: `PROJECT.md` SHA-256 `27fe4f89bcfa7ab24ecd5493715714b59423c3468bf17d9cc8a674c5c2d57d29`. Autoloop PROJECT preapproval. Current cumulative scope adds bonus-funded penetrator traversal, legal locking, shared ghost/drop target, white appearance and bonus indicator; hold prohibition follows initial acceptance. Completion commit requires push/readback, then issue 2 closure/readback before progression.

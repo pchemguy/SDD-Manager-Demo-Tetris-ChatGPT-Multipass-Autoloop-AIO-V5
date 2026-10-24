@@ -16,9 +16,10 @@ The interface presents the board, current score, controls and game status clearl
 - Grid-aligned movement and rotation with wall kicks, rejecting placements outside the board or overlapping settled cells.
 - Fixed-interval gravity and locking after a full interval from grounding, including after hard drop.
 - Hold once per locked-piece cycle, a landing ghost hidden when its projection reaches into the upper half, and keyboard hard drop.
+- Earn up to three penetrator bonuses from four-line clears. A bonus activates a white current piece that traverses occupied cells until locking at a legal nonoverlapping position; hold is disabled while active. Ghost and hard drop share its deepest valid landing.
 - Simultaneous removal of complete rows, downward compaction and line-clear scoring.
 - Spawn-based game over and repeatable restart.
-- A readable board with distinct nonwhite piece colors and accessible HTML status and controls.
+- A readable board with nonwhite regular-piece colors and white penetrator cells and accessible HTML status and controls.
 
 ## Technical direction and quality
 
