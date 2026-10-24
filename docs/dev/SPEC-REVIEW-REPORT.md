@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for PLAN. Reviewed `SPEC.md` SHA-256 `ec7b4c0d7d96172e1a54dd45675fc76ef9fd701ef96d0ef71bc00bc8cce52c9d`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
+State: Ready for PLAN. Reviewed `SPEC.md` SHA-256 `76193c81710c1a2d025ffba77dca02a315e1b91aaa0b00ab62e2ac27376fcd56`. No unresolved confirmed findings. Scope is document conformance; application/build/browser checks were not executed.
 
 ## Initial review
 
@@ -32,6 +32,16 @@ Checks: read changed roots against governing sources; inspect scope, ownership, 
 Review by the owning sdd-specify role on 2026-10-24. Governing identities: `PROJECT.md` SHA-256 `2346cb6a20032b986e79414e88b13b7a8d2727332a1dfa2d0cba8208c2c9f163`; `ARCHITECTURE.md` SHA-256 `88b08aecbe4524c3cda237b8596fa571820be70d4f3276dd69d030ef00ba2964`; `DECOMPOSITION.md` SHA-256 `1d7a32bd1cf6c96d07764e6d61392e402f78a507dba8776314b50019a333548b`.
 
 R10 gives an exact occupied-cell threshold and straddling outcome, with hide/restore and hard-drop independence acceptance. It maps to the pure visibility predicate and view consumer; R09 remains the sole landing owner. R01–R09 are retained except the explicit visibility qualification. No unresolved scope or dependency conflict.
+
+
+
+Checks: read changed roots against governing sources; inspect scope, ownership, dependencies, failure/lifecycle contracts and current acceptance coverage. Local heading/link and staged-diff checks run in the owning completion command. Prior review observations are retained; no new finding is manufactured for a justified small group.
+
+## Revision 3
+
+Review by the owning sdd-specify role on 2026-10-24. Governing identities: `PROJECT.md` SHA-256 `27fe4f89bcfa7ab24ecd5493715714b59423c3468bf17d9cc8a674c5c2d57d29`; `ARCHITECTURE.md` SHA-256 `b71727b9b5fea57214a0fd7da9baaa4812b122f560dddcdc02a82b037e823407`; `DECOMPOSITION.md` SHA-256 `ae43a24f04309742c3aa48babae56f8af3ae483459352a4583eba6418793a501`.
+
+R11 maps the bank/activation/award to reducer transitions, terminal projection to one policy boundary, legal insertion to board and appearance/count to snapshots/views. It states every success/rejection/overlap/lock invariant and ordinary-versus-penetrator geometry. R09/R10 remain canonical timing/visibility owners; hold is rejected before mutation. Acceptance includes barriers, cavities, exact bank cap, repeated inputs, timing and visible output. No confirmed conflict remains.
 
 
 
