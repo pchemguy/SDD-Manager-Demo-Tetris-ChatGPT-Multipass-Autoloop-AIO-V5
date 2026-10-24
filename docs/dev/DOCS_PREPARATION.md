@@ -4,7 +4,7 @@
 
 - Mode and source: autodoc/autoloop, explicitly requested by the user on 2026-10-24 for this repository and the six scopes below.
 - Multipass delivery: strict; no flexible integration permission was given. Later scopes append bounded phases/tasks and preserve earlier IDs, names, scope, milestone membership, order, dependencies and exits.
-- Current pass: 4, cumulative scope 4; DOCS-003 completion recorded below. After its verified publication/issue closure, continue to DOCS-004.
+- Current pass: 4, cumulative scope 4; DOCS-004 completion recorded below. After its verified publication/issue closure, continue to DOCS-005.
 - Approval basis: the user approved the first PROJECT and presented cross-scope decisions on 2026-10-24. Later PROJECT approvals are waived, announced in chat before that first checkpoint; ARCHITECTURE through TASKS checkpoints are preapproved by the selected mode. This approval authorizes the predefined sequence/resets. The presented product choices are accepted within their stated applicability.
 - Delegation after first approval: resolve later material decisions within the predefined scope, record the rationale and explain consequential choices in chat without adding approval pauses.
 - Stop: after Pass 6 DOCS-008 publication and issue closure, before DOCS-009, whole-package QC, documentation integration or implementation. Implementation will require subsequent authorization; releases apply only after verified integrated implementation phases.
@@ -72,7 +72,7 @@ Material unresolved decisions: none at the initial approved scope. TypeScript/Ca
 
 ## Pending transitions
 
-Publish/read back the current DOCS-003 completion and close/read back issue 3; then continue to DOCS-004. Git/provider observations settle these effects; earlier pass evidence is historical. Milestone 1 and DOCS-009 remain open.
+Publish/read back the current DOCS-004 completion and close/read back issue 4; then continue to DOCS-005. Git/provider observations settle these effects; earlier pass evidence is historical. Milestone 1 and DOCS-009 remain open.
 
 ## Pass 1 document evidence
 
@@ -144,3 +144,4 @@ Initial activation/hold/bonus/white-cell decisions remain accepted. Delegated pr
 
 - DOCS-002: `PROJECT.md` SHA-256 `27fe4f89bcfa7ab24ecd5493715714b59423c3468bf17d9cc8a674c5c2d57d29`. Autoloop PROJECT preapproval. Current cumulative scope adds bonus-funded penetrator traversal, legal locking, shared ghost/drop target, white appearance and bonus indicator; hold prohibition follows initial acceptance. Completion commit requires push/readback, then issue 2 closure/readback before progression.
 - DOCS-003: `ARCHITECTURE.md` SHA-256 `b71727b9b5fea57214a0fd7da9baaa4812b122f560dddcdc02a82b037e823407`. Autodoc preapproval. Reviewed shared collision-policy ownership and atomic bonus/mode transitions; settled-board insertion still enforces nonoverlap and rendering cannot mutate gameplay. Completion commit requires push/readback, then issue 3 closure/readback before progression.
+- DOCS-004: `DECOMPOSITION.md` SHA-256 `ae43a24f04309742c3aa48babae56f8af3ae483459352a4583eba6418793a501`. Autodoc preapproval. Reviewed terminal invariant, activation/award state, hold rejection and appearance metadata owners plus fixture/browser seams; no hidden board destruction or duplicate landing source. Completion commit requires push/readback, then issue 4 closure/readback before progression.

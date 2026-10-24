@@ -45,3 +45,14 @@ The snapshot includes held kind and projected landing, and the input adapter add
 ## Dynamic visibility predicate
 
 The landing component exposes occupied projected rows to a pure ghost-visibility predicate. Its result is a boolean consumed by the snapshot/view adapter; it does not mutate game state, board, source or timers. Tests supply projected-cell fixtures around rows 9 and 10 and compare rendering eligibility while retaining the same hard-drop destination. The renderer retains existing coincident/game-over suppression.
+
+## Penetrator components and state
+
+| Component | Responsibility / collaboration | Verification seam |
+| --- | --- | --- |
+| Penetrator landing policy | Enumerate in-bounds downward origins and select the deepest nonoverlapping pose; expose eligibility and terminal-grounding to the existing projector/controller. | Cavities, occupied barriers and no-terminal movement/rotation fixtures. |
+| Activation transition | Reducer owns `penetratorActive` and bank 0–3. Validate active playing state, unused activation and legal terminal before spending; preserve hold-cycle state. | Absent/full bank, repeated input and rejected activation snapshots. |
+| Lock/award transition | Board validates final insertion; reducer clears active mode, awards a capped bonus for exactly four rows and starts the next ordinary piece. | Overlap rejection, preserved transit cells, single award and restart. |
+| Appearance/indicator view | Snapshot supplies white appearance for active/settled penetrator cells and bank symbols; normal kind color remains independent. | Cell-color and 0–3-symbol screenshot/DOM assertions. |
+
+Input adds non-repeating B activation. Hold checks the active penetrator flag before any source/slot mutation. Controller grounding uses the selected policy's terminal status; activation/motion cannot independently refresh an unchanged deadline. Board cells may store kind plus white-appearance metadata, but never an active penetration ability.
