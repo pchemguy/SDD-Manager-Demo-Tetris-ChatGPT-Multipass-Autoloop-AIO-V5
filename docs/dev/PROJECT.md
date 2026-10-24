@@ -6,15 +6,16 @@ Build a lightweight, single-player Tetris game for people playing with a keyboar
 
 ## Intended experience
 
-The player moves and rotates falling tetrominoes on a 10-column, 20-row visible board. Gravity advances the active piece. When downward movement is blocked, the piece locks, completed horizontal lines clear, and the player earns points. A new piece enters play; inability to spawn ends the game. Restart begins a fresh game with an empty board and zero score.
+The player moves and rotates falling tetrominoes on a 10-column, 20-row visible board. Gravity advances the active piece. When its grounded locking interval expires, the piece locks, completed horizontal lines clear, and the player earns points. A new piece enters play; inability to spawn ends the game. Restart begins a fresh game with an empty board and zero score.
 
 The interface presents the board, current score, controls and game status clearly. Keyboard input controls horizontal movement, downward movement and rotation. Restart is available through a visible HTML control and the keyboard. Losing page focus suspends play so returning to the page does not apply a burst of missed gravity updates.
 
 ## Principal scope
 
-- All seven tetrominoes, selected through independent uniform draws.
-- Grid-aligned movement and basic rotation, rejecting placements outside the board or overlapping settled cells.
-- Fixed-interval gravity and locking on a failed downward movement attempt.
+- All seven tetrominoes, supplied by shuffled seven-piece bags.
+- Grid-aligned movement and rotation with wall kicks, rejecting placements outside the board or overlapping settled cells.
+- Fixed-interval gravity and locking after a full interval from grounding, including after hard drop.
+- Hold once per locked-piece cycle, a landing ghost and keyboard hard drop.
 - Simultaneous removal of complete rows, downward compaction and line-clear scoring.
 - Spawn-based game over and repeatable restart.
 - A readable board with distinct nonwhite piece colors and accessible HTML status and controls.

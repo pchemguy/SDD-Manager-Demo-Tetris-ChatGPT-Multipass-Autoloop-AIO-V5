@@ -91,3 +91,11 @@ Phase 1, milestones 1.1–1.3, T-001–T-009. Protected PLAN block SHA-256 `a856
 ## Reset into Pass 2
 
 Prior Pass 1 DOCS-008 checkpoint `b8ad868711a4dd4ef4f95b95c8333fef57e107c9` was published/read back and issue 8 closed. Initial PROJECT approval and autodoc/autoloop authorize this next predefined scope and reset. All existing product documents and protected phase/task blocks are retained. DOCS-001 remains complete; DOCS-002–009 are unchecked. Publish this reset, reopen/read back the same issues 2–9, and verify milestone 1 open before document revision. No package QC, integration or implementation is selected.
+
+## Pass 2 decisions
+
+Inherited timing/hold/source decisions are accepted at initial review. Delegated detail: wall kicks use candidates (0,0), (-1,0), (1,0), (-2,0), (2,0), (0,-1), (0,-2) in that order for non-O pieces; this meets bounded wall-kick scope without extra rotation-system requirements. Special action key repeats are ignored. Delivery appends Phase 2 piece supply/hold and Phase 3 rotation/landing controls, separating two independently usable increments. Phase 1/T-001–T-009 stays unchanged. Reset commit and issue reopening were read back before this revision. Later documents use scoped autodoc preapproval.
+
+## Pass 2 document evidence
+
+- DOCS-002: `PROJECT.md` SHA-256 `6f777bc9067f539f9839de43e58447eff555d015e8ab6bbd275b2edd65746768`. Autoloop PROJECT preapproval under initial human approval. Cumulative scope includes only the baseline and gameplay enhancements; future visibility, penetrator and configuration requirements remain in the scope record. Completion commit requires push/readback, then issue 2 closure/readback before progression.
