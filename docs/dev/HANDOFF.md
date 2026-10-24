@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: reset into Pass 6; publication and issue reopening require confirmation.
+Checkpoint: Pass 6 DOCS-008 completion; publication and issue closure/readback require confirmation.
 
 Outcome: root guidance retained unchanged; provenance scaffold integrated and published; documentation tracking verified; first PROJECT accepted; remaining baseline documents preapproved and reviewed; no game implemented.
 
@@ -26,6 +26,6 @@ Outcome: root guidance retained unchanged; provenance scaffold integrated and pu
 
 ## Pending work and next action
 
-- Publish/read back this reset, reopen/read back issues 2–9 and verify milestone 1 remains open.
-- Then revise PROJECT for predefined scope 6, using retained inherited decisions and strict prior-range preservation. Later document checkpoints are preapproved.
-- Final stop remains Pass 6 DOCS-008; DOCS-009 and implementation remain outside scope.
+- Publish/read back this DOCS-008 result and close/read back issue 8.
+- Stop before DOCS-009, whole-package QC, documentation integration and implementation; await explicit advance.
+- Milestone 1 and DOCS-009 remain open; no implementation or browser acceptance has run.

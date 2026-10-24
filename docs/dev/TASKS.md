@@ -161,3 +161,31 @@ Execute only an authorized range after preparation integration and eligible-phas
         - [ ] T-040 — Review, test and report phase 6
             Depends on: completion/closure of delivery milestones 6.1, 6.2, including their review tasks. Review cross-milestone code, run all phase exits/regressions, repair blockers and aggregate findings/TODOs. Commit the phase report and refresh HANDOFF; verify integration and the planned phase release. If this is the last phase in the complete owning list, also write the final implementation report and aggregate all unresolved TODOs with provenance/options.
             Report: `docs/dev/reports/phases/6/PHASE-REPORT.md`; final report when applicable: `docs/dev/reports/IMPLEMENTATION-REPORT.md`.
+
+## Phase 7 — Persistent shareable configuration
+
+- [ ] Phase 7 — Persistent shareable configuration
+    - [ ] Milestone 7.1 — Restored configuration
+        - [ ] T-041 — Implement the six-field URL codec and resolver
+            Scope: pure settings codecs/resolution and raw-source table fixtures. Depends on: T-040 and Phase 6 integration/closure.
+            Evidence: Canonical bool/enum tokens, malformed/duplicate inputs, independent URL-cookie-default selection and explicit-default intents pass. Maintain affected module/user documentation with the result.
+        - [ ] T-042 — Integrate cookie restoration before game startup
+            Scope: browser cookie reader/writer and bootstrap coordinator. Depends on: T-041.
+            Evidence: Valid explicit URL values save even at default; omitted/invalid URL retains valid cookies; first active piece latches restored policies; blocked cookies are nonfatal. Maintain affected module/user documentation with the result.
+        - [ ] T-043 — Review, test and report milestone 7.1
+            Depends on: T-041, T-042. Review the milestone implementation and collaborating modules, run its PLAN exit checks and regressions, repair blockers, and commit the report with findings and TODOs (None when empty).
+            Report: `docs/dev/reports/phases/7/7.1.md`.
+    - [ ] Milestone 7.2 — Saved and shareable changes
+        - [ ] T-044 — Persist control changes to cookies and URL
+            Scope: settings change coordinator and URL/history adapter. Depends on: T-043.
+            Evidence: One field writes its canonical cookie/query value; unrelated settings/hash survive; no navigation/history entry; write failures are independent and current-piece latching is preserved. Maintain affected module/user documentation with the result.
+        - [ ] T-045 — Verify persisted settings and document sharing behavior
+            Scope: both-browser cookie/URL/reload/error scenarios, production build and README configuration guide. Depends on: T-044.
+            Evidence: All six mixed-source/default/omission cases, retained-cookie new pages, failed persistence and complete affected gameplay regressions pass; document actual behavior and limits. Maintain affected module/user documentation with the result.
+        - [ ] T-046 — Review, test and report milestone 7.2
+            Depends on: T-044, T-045. Review the milestone implementation and collaborating modules, run its PLAN exit checks and regressions, repair blockers, and commit the report with findings and TODOs (None when empty).
+            Report: `docs/dev/reports/phases/7/7.2.md`.
+    - [ ] Milestone 7.3 — Phase review
+        - [ ] T-047 — Review, test and report phase 7
+            Depends on: completion/closure of delivery milestones 7.1, 7.2, including their review tasks. Review cross-milestone code, run all phase exits/regressions, repair blockers and aggregate findings/TODOs. Commit the phase report and refresh HANDOFF; verify integration and the planned phase release. If this is the last phase in the complete owning list, also write the final implementation report and aggregate all unresolved TODOs with provenance/options.
+            Report: `docs/dev/reports/phases/7/PHASE-REPORT.md`; final report when applicable: `docs/dev/reports/IMPLEMENTATION-REPORT.md`.
