@@ -1,8 +1,8 @@
 # Project handoff
 
-Checkpoint: DOCS-001 initialization, pending its publication and hosted closure confirmation. This snapshot is not the later branch tip; recover subsequent decisions and work from the records below and Git.
+Checkpoint: Pass 1 DOCS-008 completion, pending its publication and issue closure/readback. This snapshot is not the later branch tip; recover subsequent decisions and work from the records below and Git.
 
-Outcome: root guidance retained unchanged; provenance scaffold integrated and published; documentation tracking verified; no product documents accepted and no game implemented.
+Outcome: root guidance retained unchanged; provenance scaffold integrated and published; documentation tracking verified; first PROJECT accepted; remaining baseline documents preapproved and reviewed; no game implemented.
 
 ## Workflow and sources
 
@@ -13,7 +13,7 @@ Outcome: root guidance retained unchanged; provenance scaffold integrated and pu
 ## Scope and human decisions
 
 - Authorized: six cumulative documentation passes in autodoc/autoloop, strict multipass. First PROJECT approval active; later PROJECT approvals waived and later document checkpoints preapproved by the selected mode.
-- Next human boundary: first PROJECT review and approval. Final loop stop: Pass 6 DOCS-008 before DOCS-009, package QC, documentation integration or implementation.
+- Initial PROJECT was approved by the user on 2026-10-24. Final loop stop: Pass 6 DOCS-008 before DOCS-009, package QC, documentation integration or implementation.
 - Implementation and release execution await subsequent authorization. User requires an appropriately versioned release after each implemented, verified and integrated phase.
 - GitHub tracking enabled by existing AGENTS policy; push/read back each commit. Reporting Standard after Explicit bootstrap.
 
@@ -26,6 +26,6 @@ Outcome: root guidance retained unchanged; provenance scaffold integrated and pu
 
 ## Pending work and next action
 
-- Publish/read back the initialization commit, then close/read back DOCS-001 issue 1. Milestone 1 and issues 2–9 remain open.
-- Once confirmed, publish the first classic-baseline PROJECT proposal with the future-scope decisions retained in DOCS_PREPARATION; hold architecture for human approval.
+- Publish/read back the current DOCS-008 result and close/read back issue 8; DOCS-009/milestone 1 remain open.
+- Then reset the same DOCS-002–009 tasks/issues for predefined Pass 2. Retain the documents and Phase 1 / T-001–T-009 unchanged as protected delivery ranges.
 - No browser installation or product acceptance checks have been performed or are required for this document checkpoint.
