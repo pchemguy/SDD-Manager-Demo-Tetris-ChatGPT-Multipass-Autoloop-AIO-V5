@@ -51,6 +51,12 @@ The reducer owns bonus count and activation state; a successful activation is on
 
 ## Session configuration and preview
 
-An application settings model owns validated desired settings independently of game state. HTML controls submit typed changes; they never write reducer internals. Each active piece carries a snapshot of its locking policies so live control changes cannot retroactively lock it or refresh its deadline. Display/action-availability settings are read immediately. Restart replaces game state while retaining the settings model; page initialization creates default settings in memory.
+An application settings model owns validated desired settings independently of game state. HTML controls submit typed changes; they never write reducer internals. Each active piece carries a snapshot of its locking policies so live control changes cannot retroactively lock it or refresh its deadline. Display/action-availability settings are read immediately. Restart replaces game state while retaining the settings model; page initialization resolves validated settings through the persistence boundary before the first active piece is created.
 
-The bag source exposes a non-consuming next-kind peek. The application supplies it in snapshots; preview rendering and toggling do not draw or reorder pieces. The settings adapter and preview view depend on existing application/source ports, avoiding a second piece queue. There is no storage or URL dependency in the session-only configuration path.
+The bag source exposes a non-consuming next-kind peek. The application supplies it in snapshots; preview rendering and toggling do not draw or reorder pieces. The settings adapter and preview view depend on existing application/source ports, avoiding a second piece queue. The pure settings model has no storage or URL dependency; browser persistence adapters are outside it.
+
+## Configuration persistence boundary
+
+A pure resolver consumes raw per-setting URL and cookie observations plus schema defaults, returning validated desired settings and explicit-URL write intents. Browser adapters alone read/write cookies and the current URL. Initialization resolves every field before creating the first active piece, so its effective lock policy matches the loaded settings. One missing/invalid field cannot reset another field.
+
+The settings-change coordinator updates the desired model and sends independent cookie/URL write intents for that field. Cookie failures or unavailable History API operations cannot corrupt the model, block gameplay or cause a reload. Source resolution and write policy are separate: an omitted URL setting does not produce a default-cookie write. The reducer and core remain unaware of cookie strings or query encoding.
